@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Founders Directory</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+
+<body class="bg-black text-gray-200 min-h-screen">
+    <div class="container mx-auto px-4 py-8 mb-70">
+
+        <header class="py-16 px-8 bg-gradient-to-r from-purple-900 to-black rounded-lg mb-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between mr-5">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-5xl font-bold text-white mb-6">Connect with Visionary Founders</h1>
+                    <p class="text-xl text-gray-200 mb-8">Discover the next generation of innovators building tomorrow's
+                        groundbreaking startups. Network, collaborate, and grow together.</p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#"
+                            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors">Register
+                            as Founder</a>
+                        <a href="#"
+                            class="px-6 py-3 border border-white text-white hover:bg-white/10 font-medium rounded-md transition-colors">Explore
+                            Startups</a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
+                        <h2 class="text-4xl font-bold text-white">2,400+</h2>
+                        <p class="text-gray-300">Registered Founders</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
+                        <h2 class="text-4xl font-bold text-white">$840M</h2>
+                        <p class="text-gray-300">Total Funding Raised</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
+                        <h2 class="text-4xl font-bold text-white">56</h2>
+                        <p class="text-gray-300">Countries Represented</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
+                        <h2 class="text-4xl font-bold text-white">320+</h2>
+                        <p class="text-gray-300">Successful Exits</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/4">
+                <div class="bg-black rounded-lg sticky top-8">
+                    <div class="flex justify-between items-center p-4">
+                        <h2 class="text-xl font-bold text-white">Filter Templates</h2>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="relative px-4 mb-4">
+                        <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <input type="text"
+                            class="bg-[#0A0A0A] w-full pl-10 pr-4 py-3 rounded-lg border border-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-700 focus:border-gray-700 text-gray-400"
+                            placeholder="Search...">
+                    </div>
+
+                    <!-- Filter Categories -->
+                    <div class="border-t border-gray-800">
+                        <div class="filter-category">
+                            <button
+                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer focus:outline-none text-white border-b border-gray-800 transition-colors">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <span class="font-medium">Use Case</span>
+                                </div>
+                            </button>
+
+
+                            <div class="filter-content hidden px-4 py-3 bg-black">
+                                <div class="space-y-2">
+                                    <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                        <span class="ml-2 text-gray-300">Blog</span>
+                                    </label>
+                                    <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                        <span class="ml-2 text-gray-300">E-commerce</span>
+                                    </label>
+                                    <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
+                                        <span class="ml-2 text-gray-300">Portfolio</span>
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Founders List -->
+            <div class="md:w-3/4">
+                <div class="mb-6 flex justify-between items-center">
+                    <div>
+                        <h2 class="text-xl font-semibold text-white">Featured Founders</h2>
+                        <p class="text-gray-400 text-sm">Showing 12 of 124 founders</p>
+                    </div>
+                </div>
+
+                <!-- Grid of Founders -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Founder Card 1 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">Sarah Johnson</h3>
+                                        <p class="text-gray-300 text-sm">CEO & Co-founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">TechNova</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Building AI-powered data analytics solutions for
+                                enterprise companies</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-purple-900 bg-opacity-50 text-purple-300 text-xs px-2 py-1 rounded">AI</span>
+                                <span class="bg-blue-900 bg-opacity-50 text-blue-300 text-xs px-2 py-1 rounded">Data
+                                    Analytics</span>
+                                <span class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">Series
+                                    A</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">San Francisco, CA</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card 2 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">David Chen</h3>
+                                        <p class="text-gray-300 text-sm">Founder & CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">HealthSync</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Revolutionizing healthcare with blockchain-based
+                                medical records</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-teal-900 bg-opacity-50 text-teal-300 text-xs px-2 py-1 rounded">Healthcare</span>
+                                <span
+                                    class="bg-yellow-900 bg-opacity-50 text-yellow-300 text-xs px-2 py-1 rounded">Blockchain</span>
+                                <span
+                                    class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">Seed</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">Boston, MA</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card 3 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">Michelle Kim</h3>
+                                        <p class="text-gray-300 text-sm">CEO & Founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">GreenCart</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Sustainable e-commerce platform focusing on
+                                eco-friendly products</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">E-commerce</span>
+                                <span
+                                    class="bg-indigo-900 bg-opacity-50 text-indigo-300 text-xs px-2 py-1 rounded">Sustainability</span>
+                                <span class="bg-red-900 bg-opacity-50 text-red-300 text-xs px-2 py-1 rounded">Series
+                                    B</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">Austin, TX</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card 4 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">James Wilson</h3>
+                                        <p class="text-gray-300 text-sm">Co-founder & COO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">FinEdge</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Democratizing financial education and investing tools
+                                for millennials</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-blue-900 bg-opacity-50 text-blue-300 text-xs px-2 py-1 rounded">Fintech</span>
+                                <span
+                                    class="bg-pink-900 bg-opacity-50 text-pink-300 text-xs px-2 py-1 rounded">Education</span>
+                                <span
+                                    class="bg-orange-900 bg-opacity-50 text-orange-300 text-xs px-2 py-1 rounded">Pre-seed</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">London, UK</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card 5 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">Ahmed Hassan</h3>
+                                        <p class="text-gray-300 text-sm">Founder & CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">CloudSecure</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Next-gen cloud security solutions for enterprise
+                                companies</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-blue-900 bg-opacity-50 text-blue-300 text-xs px-2 py-1 rounded">Cybersecurity</span>
+                                <span
+                                    class="bg-purple-900 bg-opacity-50 text-purple-300 text-xs px-2 py-1 rounded">Cloud</span>
+                                <span class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">Series
+                                    A</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">Toronto, Canada</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card 6 -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition duration-300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/200" alt="Founder" class="w-full h-40 object-cover">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/48/48" alt="Founder Avatar"
+                                        class="w-12 h-12 rounded-full border-2 border-white">
+                                    <div class="ml-3">
+                                        <h3 class="text-white font-medium">Olivia Rodríguez</h3>
+                                        <p class="text-gray-300 text-sm">Co-founder & CRO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="/api/placeholder/24/24" alt="Company Logo" class="w-6 h-6 rounded">
+                                <span class="ml-2 font-medium text-white">EduMatch</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">AI-powered platform connecting students with
+                                personalized tutors</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-pink-900 bg-opacity-50 text-pink-300 text-xs px-2 py-1 rounded">EdTech</span>
+                                <span
+                                    class="bg-purple-900 bg-opacity-50 text-purple-300 text-xs px-2 py-1 rounded">AI</span>
+                                <span
+                                    class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">Seed</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400 text-sm">Madrid, Spain</span>
+                                <button class="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="bg-black bg-opacity-50 py-10 px-6">
+        <div class="container mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="flex flex-col space-y-4">
+                    <h3
+                        class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-purple-500 to-cyan-50 animate-gradient">
+                        ElevateX
+                    </h3>
+    
+                    <p class="text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+                    </p>
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-10 mt-2">
+                        <a href="#" class="text-white hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2c-2.716 0-3.056.012-4.123.06-1.064.049-1.791.218-2.427.465a4.901 4.901 0 0 0-1.772 1.153A4.902 4.902 0 0 0 2.525 5.45c-.247.636-.416 1.363-.465 2.427C2.012 8.944 2 9.284 2 12s.012 3.056.06 4.123c.049 1.064.218 1.791.465 2.427a4.902 4.902 0 0 0 1.153 1.772 4.902 4.902 0 0 0 1.772 1.153c.636.247 1.363.416 2.427.465 1.067.048 1.407.06 4.123.06s3.056-.012 4.123-.06c1.064-.049 1.791-.218 2.427-.465a4.902 4.902 0 0 0 1.772-1.153 4.902 4.902 0 0 0 1.153-1.772c.247-.636.416-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.049-1.064-.218-1.791-.465-2.427a4.902 4.902 0 0 0-1.153-1.772 4.901 4.901 0 0 0-1.772-1.153c-.636-.247-1.363-.416-2.427-.465C15.056 2.012 14.716 2 12 2zm0 1.802c2.67 0 2.986.01 4.04.058.976.045 1.505.207 1.858.344.466.182.8.399 1.15.748.35.35.566.684.748 1.15.137.353.3.882.344 1.857.048 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.04-.044.976-.207 1.505-.344 1.858a3.1 3.1 0 0 1-.748 1.15c-.35.35-.684.566-1.15.748-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-.976-.044-1.505-.207-1.858-.344a3.098 3.098 0 0 1-1.15-.748 3.098 3.098 0 0 1-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.055-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.045-.976.207-1.505.344-1.858.182-.466.399-.8.748-1.15.35-.35.684-.566 1.15-.748.353-.137.882-.3 1.857-.344 1.055-.048 1.37-.058 4.041-.058zm0 11.531a3.333 3.333 0 1 1 0-6.666 3.333 3.333 0 0 1 0 6.666zm0-8.468a5.135 5.135 0 1 0 0 10.27 5.135 5.135 0 0 0 0-10.27zm6.538-.203a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Company Links -->
+                <div class="pl-20">
+                    <h3 class="text-white font-bold text-lg mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white hover:text-gray-200">About</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">Meet the Team</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">History</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">Careers</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Services Links -->
+                <div class="pl-20">
+                    <h3 class="text-white font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white hover:text-gray-200">1on1 Coaching</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">Company Review</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">Accounts Review</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">HR Consulting</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">SEO Optimisation</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Combined Helpful Links and Legal -->
+                <div class="pl-20">
+                    <!-- Helpful Links -->
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-4">Helpful Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-white hover:text-gray-200">Contact</a></li>
+                            <li><a href="#" class="text-white hover:text-gray-200">FAQs</a></li>
+                            <li><a href="#" class="text-white hover:text-gray-200">Live Chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="mt-10 pt-6 border-t border-gray-300 border-opacity-20 text-center">
+                <p class="text-white">&copy; 2025 ElevateX</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Founders.js"></script>
+</body>
+
+</html>
