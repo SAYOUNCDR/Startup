@@ -1,3 +1,25 @@
+// <!-- JS for Modal Toggle [join now button nav bar ]--> 
+function toggleModal() {
+  const modal = document.getElementById("joinModal");
+  modal.classList.toggle("hidden");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Script for changing text
 const words = ["Founder", "Investor", "Contributor"];
 let index = 0;

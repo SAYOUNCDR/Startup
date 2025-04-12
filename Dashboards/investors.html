@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Dashboard</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar Navigation -->
+        <div class="w-full md:w-64 bg-gray-800 md:min-h-screen p-4">
+            <div class="flex items-center justify-center md:justify-start mb-8">
+                <span class="text-blue-500 text-2xl font-bold">InvestorHub</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 bg-blue-600 text-white rounded-lg">
+                            <i class="fas fa-chart-line mr-3"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-user mr-3"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-briefcase mr-3"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-handshake mr-3"></i>
+                            <span>Investments</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-bell mr-3"></i>
+                            <span>Notifications</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-file-contract mr-3"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                            <i class="fas fa-cog mr-3"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-auto pt-8">
+                <a href="#" class="flex items-center p-3 text-gray-300 hover:bg-gray-700 rounded-lg transition">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold">Investor Dashboard</h1>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/40/40" alt="User profile" class="h-10 w-10 rounded-full">
+                        <div class="ml-3">
+                            <p class="text-sm font-medium">John Investor</p>
+                            <p class="text-xs text-gray-400">Premium Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-gray-400 text-sm">Total Investments</h3>
+                        <i class="fas fa-dollar-sign text-blue-500"></i>
+                    </div>
+                    <p class="text-2xl font-bold mt-2">$1,253,000</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-green-500 text-xs flex items-center">
+                            <i class="fas fa-arrow-up mr-1"></i> 8.2%
+                        </span>
+                        <span class="text-xs text-gray-400 ml-2">Since last month</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-gray-400 text-sm">Active Investments</h3>
+                        <i class="fas fa-briefcase text-purple-500"></i>
+                    </div>
+                    <p class="text-2xl font-bold mt-2">12</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-green-500 text-xs flex items-center">
+                            <i class="fas fa-arrow-up mr-1"></i> 2
+                        </span>
+                        <span class="text-xs text-gray-400 ml-2">New this quarter</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-gray-400 text-sm">ROI (Avg)</h3>
+                        <i class="fas fa-chart-line text-green-500"></i>
+                    </div>
+                    <p class="text-2xl font-bold mt-2">21.5%</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-red-500 text-xs flex items-center">
+                            <i class="fas fa-arrow-down mr-1"></i> 1.2%
+                        </span>
+                        <span class="text-xs text-gray-400 ml-2">Since last month</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-gray-400 text-sm">Pending Opportunities</h3>
+                        <i class="fas fa-lightbulb text-yellow-500"></i>
+                    </div>
+                    <p class="text-2xl font-bold mt-2">5</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-blue-500 text-xs">Available to review</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Performance Chart -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-8">
+                <h2 class="text-xl font-bold mb-4">Portfolio Performance</h2>
+                <div class="h-64 flex items-center justify-center">
+                    <!-- Placeholder for chart -->
+                    <div class="w-full h-full bg-gray-700 rounded flex items-center justify-center">
+                        <p class="text-gray-400">Portfolio performance chart would appear here</p>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <select class="bg-gray-700 text-gray-300 px-3 py-2 rounded">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>Last 90 days</option>
+                        <option>Last year</option>
+                        <option>All time</option>
+                    </select>
+                    <div class="flex space-x-2">
+                        <button class="bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-2 rounded">
+                            <i class="fas fa-download mr-2"></i> Export
+                        </button>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Investments & Upcoming Opportunities -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Recent Investments -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold">Recent Investments</h2>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">View All</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 h-10 w-10 rounded bg-blue-500 flex items-center justify-center">
+                                <i class="fas fa-building text-white"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="font-medium">TechStart Inc.</h3>
+                                    <span class="text-green-500">+12.5%</span>
+                                </div>
+                                <p class="text-sm text-gray-400">$250,000 - Series A</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 h-10 w-10 rounded bg-purple-500 flex items-center justify-center">
+                                <i class="fas fa-microchip text-white"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="font-medium">AI Solutions Co.</h3>
+                                    <span class="text-green-500">+8.2%</span>
+                                </div>
+                                <p class="text-sm text-gray-400">$175,000 - Series B</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 h-10 w-10 rounded bg-green-500 flex items-center justify-center">
+                                <i class="fas fa-leaf text-white"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="font-medium">GreenEnergy Ltd.</h3>
+                                    <span class="text-red-500">-2.1%</span>
+                                </div>
+                                <p class="text-sm text-gray-400">$300,000 - Series A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Opportunities -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold">Upcoming Opportunities</h2>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Explore More</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="font-medium">MedTech Innovations</h3>
+                                <span class="bg-blue-900 text-blue-300 px-2 py-1 text-xs rounded-full">Healthcare</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">Revolutionary medical device startup seeking Series A
+                                funding.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Min. investment: $100k</span>
+                                <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm">Details</button>
+                            </div>
+                        </div>
+
+                        <div class="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="font-medium">FinanceAI</h3>
+                                <span
+                                    class="bg-purple-900 text-purple-300 px-2 py-1 text-xs rounded-full">Fintech</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">AI-powered financial forecasting platform entering
+                                growth phase.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Min. investment: $150k</span>
+                                <button class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -405,7 +405,8 @@
 
 
             <a href="#" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
-            <a href="../Listingpage/Startup/startups.html" class="text-white hover:text-gray-300 transition-colors">Startups</a>
+            <a href="../Listingpage/Startup/startups.html"
+                class="text-white hover:text-gray-300 transition-colors">Startups</a>
 
             <a href="#" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
             <a href="#" class="text-white hover:text-gray-300 transition-colors">Events</a>
@@ -488,7 +489,8 @@
                 <span class="ml-2">Log in</span>
             </button>
 
-            <button
+            <!-- Join Now Button -->
+            <button onclick="toggleModal()"
                 class="bg-[#E94560] hover:bg-[#e73351] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center cursor-pointer">
                 Join Now
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
@@ -497,6 +499,24 @@
                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </button>
+
+            <!-- Modal -->
+            <div id="joinModal"
+                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-900 text-white p-6 rounded-xl w-80 shadow-lg">
+                    <h2 class="text-xl font-semibold mb-4 text-center">Join As</h2>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/startup/index.html">Startup</a></button>
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/collaborators/index.html">Collaborator</a></button>
+                        <button
+                            class="bg-green-600 hover:bg-green-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/investor/index.html">Investor</a></button>
+                    </div>
+                    <button onclick="toggleModal()"
+                        class="mt-6 text-sm text-gray-400 hover:text-white transition text-center block mx-auto cursor-pointer">Cancel</button>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -1286,15 +1306,15 @@
                         --quantity: 9;
                     ">
         <div class="list">
-            <div class="item" style="--position: 1"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 8"><img src="./user-01.jpg" alt=""></div>
-            <div class="item" style="--position: 9"><img src="./user-01.jpg" alt=""></div>
+            <div class="item" style="--position: 1"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 2"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 3"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 4"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 5"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 6"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 7"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 8"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 9"><img src="../Images/Logo.png" alt=""></div>
         </div>
     </div>
 
@@ -1305,26 +1325,16 @@
                     --quantity: 10;
                 ">
         <div class="list">
-            <div class="item" style="--position: 1"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 2"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 3"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 4"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 5"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 6"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 7"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 8"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 9"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
-            <div class="item" style="--position: 10"><img
-                    src="../src/close-up-portrait-young-man-isolated-black-studio.jpg" alt=""></div>
+            <div class="item" style="--position: 1"><img src="..//Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 2"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 3"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 4"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 5"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 6"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 7"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 8"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 9"><img src="../Images/gitlab-logo-400.png" alt=""></div>
+            <div class="item" style="--position: 10"><img src="../Images/gitlab-logo-400.png" alt=""></div>
         </div>
     </div>
 
