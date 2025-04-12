@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             )";
 
     if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Registration successful!'); window.location.href = '../Dashboards/Founder-startup.html';</script>";
+        echo "<script>alert('Registration successful!'); window.location.href = '../SignUps/login/index.php';</script>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }
