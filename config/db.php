@@ -4,12 +4,12 @@ $username = "root";
 $password = "";
 $database_name = "ElevateX";
 
-$conn = mysqli_connect($server_name, $username, $password, $database_name);
+$conn = mysqli_connect($server_name, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql ="CREATE DATABASE IF NOT EXISTS $database_name";
+$sql = "CREATE DATABASE IF NOT EXISTS $database_name";
 if (mysqli_query($conn, $sql)) {
     echo "Database created successfully";
 } else {
@@ -17,4 +17,9 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
+
+
+// Connect to the database
+$conn = mysqli_connect($server_name, $username, $password, $database_name);
+
 ?>
