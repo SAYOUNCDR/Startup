@@ -84,90 +84,32 @@ function eraseEffect() {
 
 typeEffect(words[index]); // Start animation
 
+// Toggle functionality for filter categories
+document.querySelectorAll(".filter-category button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector("svg");
 
+    // Close all other open filters
+    document.querySelectorAll(".filter-content").forEach((item) => {
+      if (item !== content && item.classList.contains("block")) {
+        item.classList.remove("block");
+        item.classList.add("hidden");
+        const parentButton = item.previousElementSibling;
+        const parentIcon = parentButton.querySelector("svg");
+        parentIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />`;
+      }
+    });
 
-
-
-//-------------------------
-const data = [
-  {
-    id: 1,
-    title: "Pardes Biosciences",
-    description: "We break viruses",
-    image: "./user-01.jpg",
-    location: "San Francisco, CA, USA",
-  },
-  {
-    id: 2,
-    title: "TechNova",
-    description: "Innovating the future",
-    image: "./nav-img-1.jpg",
-    location: "New York, NY, USA",
-  },
-  {
-    id: 2,
-    title: "TechNova",
-    description: "Innovating the future",
-    image: "./nav-img-1.jpg",
-    location: "New York, NY, USA",
-  },
-];
-
-const company = document.querySelector("#company-card");
-
-data.forEach((item) => {
-  const card = document.createElement("div");
-  card.className =
-    "bg-[#0b0b0d] rounded-lg p-5 flex items-center hover:bg-[#383838] transition-colors cursor-pointer border border-gray-700";
-
-  // Image div
-  const imgDiv = document.createElement("div");
-  imgDiv.className = "mr-4";
-  const innerImgDiv = document.createElement("div");
-  innerImgDiv.className =
-    "w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center";
-  const img = document.createElement("img");
-  img.src = item.image;
-  img.alt = item.title;
-  img.className = "w-full h-full object-cover rounded-full";
-  innerImgDiv.appendChild(img);
-  imgDiv.appendChild(innerImgDiv);
-
-  // Middle content (title + description + tags)
-  const middleDiv = document.createElement("div");
-  middleDiv.className = "flex-grow";
-  const title = document.createElement("h3");
-  title.className = "text-lg font-semibold text-gray-200";
-  title.innerText = item.title;
-
-  const description = document.createElement("p");
-  description.className = "text-gray-400 text-sm";
-  description.innerText = item.description;
-
-  const tagsDiv = document.createElement("div");
-  tagsDiv.className = "mt-2 flex space-x-2";
-  const tag = document.createElement("span");
-  tag.className = "bg-blue-900 text-blue-300 px-2 py-1 rounded-full text-xs";
-  tag.innerText = "HEALTHCARE"; // You can make this dynamic too
-  tagsDiv.appendChild(tag);
-
-  middleDiv.appendChild(title);
-  middleDiv.appendChild(description);
-  middleDiv.appendChild(tagsDiv);
-
-  // Location
-  const locationDiv = document.createElement("div");
-  locationDiv.className = "text-right";
-  const location = document.createElement("p");
-  location.className = "text-gray-300";
-  location.innerText = item.location;
-  locationDiv.appendChild(location);
-
-  // Assemble all parts
-  card.appendChild(imgDiv);
-  card.appendChild(middleDiv);
-  card.appendChild(locationDiv);
-
-  // Append card to the main container
-  company.appendChild(card);
+    // Toggle current filter
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      content.classList.add("block");
+      icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />`;
+    } else {
+      content.classList.remove("block");
+      content.classList.add("hidden");
+      icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />`;
+    }
+  });
 });
