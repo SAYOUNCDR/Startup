@@ -41,13 +41,14 @@ $collaborators_sql = "CREATE TABLE IF NOT EXISTS collaborators (
 )";
 
 // Investors Table
+// In tables.php, update the investors table creation:
 $investors_sql = "CREATE TABLE IF NOT EXISTS investors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     password VARCHAR(255),
     organization VARCHAR(100),
-    title VARCHAR(100),
+    position VARCHAR(100),      // Changed from title to position
     investor_type VARCHAR(100),
     linkedin VARCHAR(255),
     investment_stage VARCHAR(50),
