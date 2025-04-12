@@ -71,27 +71,27 @@
           <p class="text-gray-400">Join the ElevateX ecosystem and connect with investors</p>
         </div>
 
-        <form id="signupForm" class="space-y-6">
+        <form id="signupForm" class="space-y-6" action="../../config/addfounder.php" method="POST">
           <!-- Two-column layout for shorter fields -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Founder Information -->
             <div>
               <label for="fullName" class="block mb-2 font-medium">Founder's Full Name</label>
-              <input type="text" id="fullName"
+              <input type="text" id="fullName" name="fullName"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="John Smith" required />
             </div>
 
             <div>
               <label for="email" class="block mb-2 font-medium">Email Address</label>
-              <input type="email" id="email"
+              <input type="email" id="email" name="email"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="founder@startup.com" required />
             </div>
 
             <div>
               <label for="password" class="block mb-2 font-medium">Password</label>
-              <input type="password" id="password"
+              <input type="password" id="password" name="password"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="••••••••" required />
             </div>
@@ -104,14 +104,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="startupName" class="block mb-2 font-medium">Startup Name</label>
-                <input type="text" id="startupName"
+                <input type="text" id="startupName" name="startupName"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="NextGen Solutions" required />
               </div>
 
               <div>
                 <label for="category" class="block mb-2 font-medium">Category</label>
-                <select id="category"
+                <select id="category" name="category"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select a category</option>
@@ -129,14 +129,14 @@
 
               <div>
                 <label for="foundingDate" class="block mb-2 font-medium">Founding Date</label>
-                <input type="date" id="foundingDate"
+                <input type="date" id="foundingDate" name="foundingDate"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required />
               </div>
 
               <div>
                 <label for="companySize" class="block mb-2 font-medium">Company Size</label>
-                <select id="companySize"
+                <select id="companySize" name="companySize"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select team size</option>
@@ -152,7 +152,7 @@
 
             <div class="mt-6">
               <label for="description" class="block mb-2 font-medium">Startup Description</label>
-              <textarea id="description" rows="3"
+              <textarea id="description" rows="3" name="description"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="Briefly describe what your startup does and the problem it solves..." required></textarea>
             </div>
@@ -165,7 +165,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="fundingStage" class="block mb-2 font-medium">Current Funding Stage</label>
-                <select id="fundingStage"
+                <select id="fundingStage"  name="fundingStage"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select stage</option>
@@ -180,14 +180,14 @@
 
               <div>
                 <label for="raisedAmount" class="block mb-2 font-medium">Funding Raised So Far</label>
-                <input type="text" id="raisedAmount"
+                <input type="text" id="raisedAmount" name="raisedAmount"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="$250,000" />
               </div>
 
               <div class="md:col-span-2">
                 <label for="seeking" class="block mb-2 font-medium">Currently Seeking</label>
-                <input type="text" id="seeking"
+                <input type="text" id="seeking" name="seeking"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="E.g., $500,000 seed funding, strategic partnerships, etc." />
               </div>
@@ -283,7 +283,7 @@
     </svg>
   </div>
 
-  
+
 </body>
 
 </html>

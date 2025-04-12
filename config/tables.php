@@ -6,7 +6,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Founders Table []
+// Founders Table [checked all correct]
 $founders_sql = "CREATE TABLE IF NOT EXISTS founders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(100),
@@ -77,4 +77,3 @@ if (mysqli_query($conn, $investors_sql)) {
     echo "Error creating investors table: " . mysqli_error($conn) . "<br>";
 }
 
-mysqli_close($conn);
