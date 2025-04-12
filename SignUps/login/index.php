@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
       $_SESSION['funding_raised'] = $row['funding_raised'];
       $_SESSION['currently_seeking'] = $row['currently_seeking'];
 
-      header("Location: ../../Dashboards/Founder-startup.html");
+      header("Location: ../../Dashboards/Founder-startup.php");
       exit();
     } else {
       echo "<script>alert('Invalid password. Please try again.');</script>";

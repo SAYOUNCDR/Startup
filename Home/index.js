@@ -4,27 +4,10 @@ function toggleModal() {
   modal.classList.toggle("hidden");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Script for changing text
 const words = ["Founder", "Investor", "Contributor"];
 let index = 0;
 const wordElement = document.getElementById("changing-word");
-
 function typeEffect(word) {
   wordElement.textContent = "";
   let i = 0;
@@ -40,7 +23,6 @@ function typeEffect(word) {
   }
   type();
 }
-
 function eraseEffect() {
   let text = wordElement.textContent;
 
@@ -56,8 +38,8 @@ function eraseEffect() {
   }
   erase();
 }
-
 typeEffect(words[index]); // Start animation
+
 
 //Js for nav bar hover stroke colour change
 document.addEventListener("DOMContentLoaded", function () {
@@ -121,7 +103,6 @@ function toggleAccordion(id) {
 }
 
 // JavaScript for Tab Functionality with Smooth Transitions {how it works}
-
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".user-tab-btn");
   const tabContents = document.querySelectorAll(".user-tab-content");
@@ -179,16 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
-
-
 // Tab Switching JavaScript {User category section}
-
 function changeTab(tabId) {
   // Hide all tab contents
   document.querySelectorAll(".tab-content").forEach((content) => {

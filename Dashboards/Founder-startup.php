@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +48,7 @@
                             <button class="flex items-center space-x-2 focus:outline-none">
                                 <img class="h-8 w-8 rounded-full border border-gray-700" src="/api/placeholder/32/32"
                                     alt="User avatar">
-                                <span class="text-sm font-medium">Sarah Johnson</span>
+                                <span class="text-sm font-medium"><?php echo $_SESSION['founder_name'] ?></span>
                             </button>
                         </div>
                     </div>
