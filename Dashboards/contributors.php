@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +19,7 @@
 
 <body class="min-h-screen bg-black text-white">
     <!-- Navbar -->
-    <nav class="bg-[#0A0A0A] shadow-md border-b border-gray-800">
+    <nav class="bg-black shadow-md border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">

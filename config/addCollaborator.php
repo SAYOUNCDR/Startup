@@ -18,11 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$first_name', '$last_name', '$email', '$password', '$title', '$company', '$expertise', '$experience', '$bio', '$linkedin', '$preferences')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Collaborator registered successfully!";
+        echo "<script>alert('Registration successful!'); window.location.href = '../SignUps/login/index.php';</script>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }
 
     mysqli_close($conn);
+}else{
+    echo "Invalid request.";
 }
 ?>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,19 +75,19 @@
           <p class="text-gray-400">Help startups grow by contributing your expertise</p>
         </div>
 
-        <form id="signupForm" class="space-y-6">
+        <form id="signupForm" class="space-y-6" method="POST" action="../../config/addCollaborator.php">
           <!-- Two Column Layout for Personal Info -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="firstName" class="block mb-2 font-medium">First Name</label>
-              <input type="text" id="firstName"
+              <input type="text" id="firstName" name="first_name"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="John" required />
             </div>
 
             <div>
               <label for="lastName" class="block mb-2 font-medium">Last Name</label>
-              <input type="text" id="lastName"
+              <input type="text" id="lastName" name="last_name"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="Doe" required />
             </div>
@@ -91,7 +95,7 @@
 
           <div>
             <label for="email" class="block mb-2 font-medium">Email Address</label>
-            <input type="email" id="email"
+            <input type="email" id="email" name="email"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="name@company.com" required />
           </div>
@@ -99,37 +103,31 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="password" class="block mb-2 font-medium">Password</label>
-              <input type="password" id="password"
+              <input type="password" id="password" name="password"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="••••••••" required />
-            </div>
-
-            <div>
-              <label for="confirmPassword" class="block mb-2 font-medium">Confirm Password</label>
-              <input type="password" id="confirmPassword"
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                placeholder="••••••••" required />
+              <input type="checkbox" onclick="togglePassword()"> Show Password<br>
             </div>
           </div>
 
           <!-- Professional Info -->
           <div>
             <label for="title" class="block mb-2 font-medium">Professional Title</label>
-            <input type="text" id="title"
+            <input type="text" id="title" name="title"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="Software Engineer, Product Manager, UX Designer, etc." required />
           </div>
 
           <div>
             <label for="company" class="block mb-2 font-medium">Current Company (Optional)</label>
-            <input type="text" id="company"
+            <input type="text" id="company" name="company"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="Company name" />
           </div>
 
           <div>
             <label for="expertise" class="block mb-2 font-medium">Areas of Expertise</label>
-            <select id="expertise"
+            <select id="expertise" name="expertise"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               required>
               <option value="software-development">Software Development</option>
@@ -149,7 +147,7 @@
 
           <div>
             <label for="experience" class="block mb-2 font-medium">Years of Experience</label>
-            <select id="experience"
+            <select id="experience" name="experience"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               required>
               <option value="">Select experience level</option>
@@ -162,14 +160,14 @@
 
           <div>
             <label for="bio" class="block mb-2 font-medium">Brief Bio</label>
-            <textarea id="bio" rows="3"
+            <textarea id="bio" rows="3" name="bio"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="Tell us about your background and how you'd like to help startups" required></textarea>
           </div>
 
           <div>
             <label for="linkedin" class="block mb-2 font-medium">LinkedIn Profile URL (Optional)</label>
-            <input type="url" id="linkedin"
+            <input type="url" id="linkedin" name="linkedin"
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="https://linkedin.com/in/yourprofile" />
           </div>
@@ -220,7 +218,7 @@
             </label>
           </div>
 
-          <button type="submit"
+          <button type="submit" name="submit" value="submit"
             class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-lg flex items-center justify-center">
             Create Collaborator Account
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -307,7 +305,7 @@
   </div>
 
   <script>
-    document.getElementById('signupForm').addEventListener('submit', function (e) {
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
       // Get form values
@@ -360,6 +358,21 @@
       // Show a simple alert for demo purposes
       alert('Thank you for signing up as an ElevateX collaborator! Once approved, you\'ll be matched with startups that could benefit from your expertise.');
     });
+
+
+
+
+
+    // Function to toggle password visibility
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      // Check the checkbox state
+      if (passwordField.type === "password") {
+        passwordField.type = "text"; // Show the password
+      } else {
+        passwordField.type = "password"; // Hide the password
+      }
+    }
   </script>
 </body>
 

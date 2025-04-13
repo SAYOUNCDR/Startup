@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
     // Check if the email exists in the investors table
     $query = "SELECT * FROM investors WHERE email = '$email'";
     $result = mysqli_query($conn, $query);
-    if(mysqli_num_rows($result) == 1) {
+    if (mysqli_num_rows($result) == 1) {
       $row = mysqli_fetch_assoc($result);
       if (password_verify($password, $row['password'])) {
         $_SESSION['investor_id'] = $row['id'];
@@ -52,7 +52,32 @@ if (isset($_POST['login'])) {
         echo "<script>alert('Invalid password. Please try again.');</script>";
       }
     } else {
-      echo "<script>alert('Email not found. Please register first.');</script>";
+      // If the email is not found in either table, search in the collaborators table
+      $query = "SELECT * FROM collaborators WHERE email = '$email'";
+      $result = mysqli_query($conn, $query);
+
+      if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row['password'])) {
+          $_SESSION['collaborator_id'] = $row['id'];
+          $_SESSION['collaborator_first_name'] = $row['first_name'];
+          $_SESSION['collaborator_last_name'] = $row['last_name'];
+          $_SESSION['collaborator_email'] = $row['email'];
+          $_SESSION['title'] = $row['title'];
+          $_SESSION['company'] = $row['company'];
+          $_SESSION['expertise'] = $row['expertise'];
+          $_SESSION['experience'] = $row['experience'];
+          $_SESSION['bio'] = $row['bio'];
+          $_SESSION['linkedin'] = $row['linkedin'];
+          // $_SESSION['preferences'] = $row['preferences'];
+          header("Location: ../../Dashboards/collaborators.php");
+          exit();
+        } else {
+          echo "<script>alert('Invalid password. Please try again.');</script>";
+        }
+      } else {
+        echo "<script>alert('Email not found. Please check your email or register.');</script>";
+      }
     }
   }
 }
