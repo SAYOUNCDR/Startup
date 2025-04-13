@@ -1068,7 +1068,7 @@
                         dedicated to
                         innovation, growth, and transformative collaboration.</p>
                     <button
-                        class="mt-8 px-10 py-4 cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 rounded-full font-bold text-white transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#E94560]/20 flex items-center mx-auto">
+                        class="mt-8 px-10 py-4 cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 rounded-lg font-bold text-white transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#E94560]/20 flex items-center mx-auto">
                         Get Started Now
                         <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -1757,8 +1757,7 @@
             <!-- Startup Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Startup Card 1 -->
-                <div
-                    class="bg-[#0b0b0d] border border-gray-600 rounded-xl overflow-hidden transition-transform duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
+                <div class="bg-[#0b0b0d] border border-gray-600 rounded-xl overflow-hidden transition-transform duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                     <div class="relative">
                         <div class="h-48 bg-gray-800 flex items-center justify-center">
                             <img src="../gradient.png" alt="EcoTech Solutions" class="object-cover h-full w-full">
@@ -1768,7 +1767,7 @@
                             Seeking Funding
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 bg-gradient-to-br from-gray-900 to-black">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-bold text-xl text-white">EcoTech Solutions</h3>
                             <span class="bg-gray-800 text-gray-300 text-xs px-2 py-1 rounded">CleanTech</span>
@@ -1785,9 +1784,9 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="bg-[#E94560] hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
                             <button
-                                class="bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
+                                class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -1804,7 +1803,7 @@
                             Seeking Mentorship
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 bg-gradient-to-br from-gray-900 to-black">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-bold text-xl text-white">MediSync</h3>
                             <span class="bg-gray-800 text-gray-300 text-xs px-2 py-1 rounded">HealthTech</span>
@@ -1822,9 +1821,9 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="bg-[#E94560] hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
                             <button
-                                class="bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
+                                class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -1841,7 +1840,7 @@
                             Seeking Collaboration
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 bg-gradient-to-br from-gray-900 to-black">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="font-bold text-xl text-white">FinLeap</h3>
                             <span class="bg-gray-800 text-gray-300 text-xs px-2 py-1 rounded">FinTech</span>
@@ -1859,9 +1858,9 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="bg-[#E94560] hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
                             <button
-                                class="bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
+                                class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -1870,13 +1869,8 @@
             <!-- View All Button -->
             <div class="mt-12 text-center">
                 <a href="#"
-                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-md hover:border-[#E94560] text-white font-medium transition-colors duration-300 group">
+                    class="inline-flex items-center justify-center px-6 py-3 mx-auto text-white font-medium border border-gray-600 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-[#E94560]/20">
                     Explore All Startups
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:text-[#E94560]" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
                 </a>
             </div>
         </div>
