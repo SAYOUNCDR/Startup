@@ -102,6 +102,7 @@ function toggleAccordion(id) {
   }
 }
 
+
 // JavaScript for Tab Functionality with Smooth Transitions {how it works}
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".user-tab-btn");

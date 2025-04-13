@@ -73,17 +73,7 @@ session_start();
                     <h1 class="text-2xl sm:text-3xl font-bold text-white shadow-text"><?php echo $_SESSION['founder_name'] ?></h1>
                     <p class="text-blue-300 font-medium">
                         <?php
-                        echo $_SESSION['founder_id'] . "<br>";
-                        echo $_SESSION['founder_name'] . "<br>";
-                        echo $_SESSION['founder_email'] . "<br>";
                         echo $_SESSION['founder_startup'] . "<br>";
-                        echo $_SESSION['category'] . "<br>";
-                        echo $_SESSION['founding_date'] . "<br>";
-                        echo $_SESSION['company_size'] . "<br>";
-                        echo $_SESSION['description'] . "<br>";
-                        echo $_SESSION['funding_stage'] . "<br>";
-                        echo $_SESSION['funding_raised'] . "<br>";
-                        echo $_SESSION['currently_seeking'] . "<br>";
                         ?>
                     </p>
                 </div>
@@ -148,7 +138,7 @@ session_start();
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span>sarah@techinnovate.ai</span>
+                                <span><?php echo $_SESSION['founder_email']; ?></span>
                             </div>
                         </div>
 
@@ -191,7 +181,7 @@ session_start();
                             </div>
                             <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Team Members</p>
-                                <p class="text-2xl font-bold mt-1">24</p>
+                                <p class="text-2xl font-bold mt-1"><?php echo $_SESSION['company_size'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -239,8 +229,10 @@ session_start();
                 <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4 flex justify-between items-center">
                         <h3 class="text-lg font-medium">Current Startups</h3>
-                        <button class="text-sm bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white">+ New
-                            Startup</button>
+                        <!-- Add new startup button -->
+                        <!-- <button class="text-sm bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white">
+                            + New Startup
+                        </button> -->
                     </div>
                     <div class="p-6">
                         <!-- TechInnovate AI -->
