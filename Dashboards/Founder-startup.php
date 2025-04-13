@@ -62,13 +62,13 @@ session_start();
         <!-- Profile Header -->
         <div class="mb-8 relative">
             <!-- Cover Image -->
-            <div class="h-48 w-full rounded-xl overflow-hidden bg-gradient-to-r from-blue-900 to-purple-900 shadow-lg">
+            <div class="h-48 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-gray-700 shadow-lg">
                 <img class="w-full h-full object-cover opacity-40" src="/api/placeholder/1200/300" alt="Cover">
             </div>
 
             <div class="absolute bottom-0 left-0 transform translate-y-1/2 ml-6 sm:ml-10 flex items-end mb-5">
-                <img class="h-24 w-24 sm:h-32 sm:w-32 rounded-xl border-4 border-white shadow-xl"
-                    src="../Images/gitlab-logo-400.png" alt="Profile picture">
+                <img class="h-24 w-24 sm:h-32 sm:w-32 rounded-lg border-4 border-white shadow-xl"
+                    src="../Images/nav-img-1.png" alt="Profile picture">
                 <div class="ml-4 pb-2">
                     <h1 class="text-2xl sm:text-3xl font-bold text-white shadow-text"><?php echo $_SESSION['founder_name'] ?></h1>
                     <p class="text-blue-300 font-medium">
