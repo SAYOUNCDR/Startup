@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Founder Profile | StartupConnect</title>
+    <title>Founder Profile | ElevateX</title>
     <link rel="stylesheet" href="../output.css">
     <style>
         body {
@@ -23,7 +23,7 @@ session_start();
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <div class="text-xl font-bold">StartupConnect</div>
+                    <div class="text-xl font-bold">ElevateX</div>
                 </div>
                 <div class="flex items-center space-x-4">
                     <button class="p-1 rounded text-gray-400 hover:text-white focus:outline-none">
@@ -70,12 +70,26 @@ session_start();
                 <img class="h-24 w-24 sm:h-32 sm:w-32 rounded-xl border-4 border-white shadow-xl"
                     src="../Images/gitlab-logo-400.png" alt="Profile picture">
                 <div class="ml-4 pb-2">
-                    <h1 class="text-2xl sm:text-3xl font-bold text-white shadow-text">Sarah Johnson</h1>
-                    <p class="text-blue-300 font-medium">Tech Entrepreneur & Founder</p>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-white shadow-text"><?php echo $_SESSION['founder_name'] ?></h1>
+                    <p class="text-blue-300 font-medium">
+                        <?php
+                        echo $_SESSION['founder_id'] . "<br>";
+                        echo $_SESSION['founder_name'] . "<br>";
+                        echo $_SESSION['founder_email'] . "<br>";
+                        echo $_SESSION['founder_startup'] . "<br>";
+                        echo $_SESSION['category'] . "<br>";
+                        echo $_SESSION['founding_date'] . "<br>";
+                        echo $_SESSION['company_size'] . "<br>";
+                        echo $_SESSION['description'] . "<br>";
+                        echo $_SESSION['funding_stage'] . "<br>";
+                        echo $_SESSION['funding_raised'] . "<br>";
+                        echo $_SESSION['currently_seeking'] . "<br>";
+                        ?>
+                    </p>
                 </div>
             </div>
 
-            <div class="flex justify-end mt-4 space-x-3">
+            <!-- <div class="flex justify-end mt-4 space-x-3">
                 <button
                     class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white shadow-lg transition duration-200">
                     Connect
@@ -84,7 +98,7 @@ session_start();
                     class="bg-transparent border border-gray-600 hover:border-gray-500 px-4 py-2 rounded-lg text-white shadow-lg transition duration-200">
                     Message
                 </button>
-            </div>
+            </div> -->
         </div>
 
         <div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -173,7 +187,7 @@ session_start();
                             </div>
                             <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Total Fundraised</p>
-                                <p class="text-2xl font-bold mt-1">$12.4M</p>
+                                <p class="text-2xl font-bold mt-1">$<?php echo $_SESSION['funding_raised'] ?>M</p>
                             </div>
                             <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Team Members</p>
@@ -236,16 +250,17 @@ session_start();
                                     src="/api/placeholder/64/64" alt="Company logo">
                                 <div class="flex-1">
                                     <div class="flex flex-wrap justify-between mb-2">
-                                        <h4 class="text-lg font-bold">TechInnovate AI</h4>
+                                        <h4 class="text-lg font-bold">
+                                            <?php echo $_SESSION['founder_startup'] ?>
+                                        </h4>
                                         <span
                                             class="bg-green-900 text-green-300 px-2 py-1 rounded text-xs">Active</span>
                                     </div>
-                                    <p class="text-gray-400 text-sm mb-3">AI-powered financial analytics platform for
-                                        small businesses</p>
+                                    <p class="text-gray-400 text-sm mb-3"><?php echo $_SESSION['description'] ?></p>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded">Founded 2023</span>
-                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded">Series A</span>
-                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded">$7.5M Raised</span>
+                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded">Founded <?php echo $_SESSION['founding_date'] ?></span>
+                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded"><?php echo $_SESSION['funding_stage'] ?></span>
+                                        <span class="bg-gray-800 text-xs px-2 py-1 rounded">$<?php echo $_SESSION['funding_raised'] ?>M Raised</span>
                                     </div>
                                 </div>
                             </div>
@@ -304,8 +319,8 @@ session_start();
                             </div>
                         </div>
 
-                        <!-- GreenSustain -->
-                        <div class="mb-8 bg-black rounded-xl border border-gray-800 overflow-hidden shadow-lg">
+                        <!-- GreenSustain [More starups can be added here]-->
+                        <!-- <div class="mb-8 bg-black rounded-xl border border-gray-800 overflow-hidden shadow-lg">
                             <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center">
                                 <img class="h-16 w-16 rounded-lg border border-gray-700 mb-4 sm:mb-0 sm:mr-6"
                                     src="/api/placeholder/64/64" alt="Company logo">
@@ -372,7 +387,7 @@ session_start();
                                         Team</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Previous Success -->
                         <div
@@ -493,7 +508,7 @@ session_start();
                                 <div class="flex-1 bg-black rounded-lg border border-gray-800 p-4">
                                     <div class="flex justify-between mb-2">
                                         <div>
-                                            <span class="font-medium">Sarah Johnson</span>
+                                            <span class="font-medium"><?php echo $_SESSION['founder_name']  ?></span>
                                             <span class="text-gray-500"> closed Series A funding for </span>
                                             <span class="font-medium text-blue-400">TechInnovate AI</span>
                                         </div>
@@ -582,7 +597,7 @@ session_start();
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-6 md:mb-0">
-                    <div class="text-xl font-bold mb-2">StartupConnect</div>
+                    <div class="text-xl font-bold mb-2">ElevateX</div>
                     <p class="text-gray-400 text-sm max-w-md">Connecting founders, investors, and talent to build the
                         next
                         generation of innovative companies.</p>
@@ -626,7 +641,7 @@ session_start();
                 </div>
             </div>
             <div class="mt-8 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-gray-500">© 2025 StartupConnect. All rights reserved.</p>
+                <p class="text-sm text-gray-500">© 2025 ElevateX. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white">
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
