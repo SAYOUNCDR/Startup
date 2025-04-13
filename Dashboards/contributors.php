@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaborator Dashboard | StartupConnect</title>
+    <title>Collaborator Dashboard | ElevateX</title>
     <link rel="stylesheet" href="../output.css">
     <style>
         body {
@@ -23,7 +23,7 @@ session_start();
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <div class="text-xl font-bold">StartupConnect</div>
+                    <div class="text-xl font-bold">ElevateX</div>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
@@ -34,14 +34,15 @@ session_start();
                                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                             </svg>
                         </button>
-                        <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span>
+                        <!-- will show red dot when there msg in notigfication bar -->
+                        <!-- <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span> -->
                     </div>
                     <div class="ml-3 relative">
                         <div>
                             <button class="flex items-center space-x-2 focus:outline-none">
                                 <img class="h-8 w-8 rounded-full border border-gray-700" src="/api/placeholder/32/32"
                                     alt="User avatar">
-                                <span class="text-sm font-medium">John Developer</span>
+                                <span class="text-sm font-medium"><?php echo $_SESSION['collaborator_first_name']; ?></span>
                             </button>
                         </div>
                     </div>
@@ -56,24 +57,26 @@ session_start();
         <div class="mb-8 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Collaborator Dashboard</h1>
             <div class="flex space-x-3">
+                <!-- Green active icon shoing wether active ot not -->
                 <span class="bg-green-900 px-3 py-1 rounded-full text-green-300 text-sm flex items-center">
                     <span class="h-2 w-2 rounded-full bg-green-400 mr-2"></span>
-                    Available for Work
+                    Available <?php echo $_SESSION['collaborator_email'] ?>
                 </span>
                 <button
-                    class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white shadow-lg transition duration-200">Find
-                    Projects</button>
+                    class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white shadow-lg transition duration-200 cursor-pointer">Find
+                    Projects
+                </button>
             </div>
         </div>
 
         <!-- Profile Overview Card -->
-        <div class="mb-8 bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+        <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
             <div class="p-6">
                 <div class="flex flex-col md:flex-row items-start md:items-center">
                     <img class="h-24 w-24 rounded-xl border-2 border-blue-500 shadow-md" src="../Images/user-01.jpg"
                         alt="Profile picture">
                     <div class="mt-4 md:mt-0 md:ml-6 flex-1">
-                        <h2 class="text-xl font-bold">John Developer</h2>
+                        <h2 class="text-xl font-bold"><?php echo $_SESSION['collaborator_first_name']; ?></h2>
                         <p class="text-gray-400">Full-Stack Engineer | UI/UX Specialist</p>
                         <div class="flex mt-2 space-x-2">
                             <span class="bg-gray-800 text-blue-400 px-2 py-1 rounded-lg text-xs">React</span>
@@ -145,7 +148,7 @@ session_start();
             <!-- Left Column -->
             <div class="lg:col-span-2">
                 <!-- Active Projects -->
-                <div class="mb-8 bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4 flex justify-between items-center">
                         <h3 class="text-lg font-medium">Active Projects</h3>
                         <button class="text-sm text-blue-400 hover:text-blue-300">View All</button>
@@ -228,7 +231,7 @@ session_start();
                 </div>
 
                 <!-- Recent Activity -->
-                <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">Recent Activity</h3>
                     </div>
@@ -313,7 +316,7 @@ session_start();
             <!-- Right Column -->
             <div>
                 <!-- Recommended Projects -->
-                <div class="mb-8 bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">Recommended Projects</h3>
                     </div>
@@ -383,7 +386,7 @@ session_start();
                 </div>
 
                 <!-- Upcoming Deadlines -->
-                <div class="mb-8 bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">Upcoming Deadlines</h3>
                     </div>
@@ -423,119 +426,119 @@ session_start();
                     </div>
                 </div>
 
-            <!-- Messages -->
-            <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
-                <div class="border-b border-gray-800 px-6 py-4">
-                    <h3 class="text-lg font-medium">Messages</h3>
-                </div>
-                <div class="p-6">
-                    <div class="space-y-4">
-                        <!-- Message 1 -->
-                        <div class="flex items-start">
-                            <img class="h-10 w-10 rounded-full mr-3 border border-gray-700" src="/api/placeholder/40/40"
-                                alt="Sender avatar">
-                            <div class="flex-1 bg-black rounded-lg p-3 border border-gray-800">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-medium">Sarah Miller</span>
-                                    <span class="text-xs text-gray-400">10:35 AM</span>
+                <!-- Messages -->
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                    <div class="border-b border-gray-800 px-6 py-4">
+                        <h3 class="text-lg font-medium">Messages</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <!-- Message 1 -->
+                            <div class="flex items-start">
+                                <img class="h-10 w-10 rounded-full mr-3 border border-gray-700" src="/api/placeholder/40/40"
+                                    alt="Sender avatar">
+                                <div class="flex-1 bg-black rounded-lg p-3 border border-gray-800">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-medium">Sarah Miller</span>
+                                        <span class="text-xs text-gray-400">10:35 AM</span>
+                                    </div>
+                                    <p class="text-sm text-gray-300">Hi John, can we discuss the dashboard wireframes for HealthTech AI
+                                        today?</p>
                                 </div>
-                                <p class="text-sm text-gray-300">Hi John, can we discuss the dashboard wireframes for HealthTech AI
-                                    today?</p>
+                            </div>
+
+                            <!-- Message 2 -->
+                            <div class="flex items-start">
+                                <img class="h-10 w-10 rounded-full mr-3 border border-gray-700" src="/api/placeholder/40/40"
+                                    alt="Sender avatar">
+                                <div class="flex-1 bg-black rounded-lg p-3 border border-gray-800">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="font-medium">Alex Chen</span>
+                                        <span class="text-xs text-gray-400">Yesterday</span>
+                                    </div>
+                                    <p class="text-sm text-gray-300">Thanks for your help with the API integration. The team was really
+                                        impressed!</p>
+                                </div>
                             </div>
                         </div>
-            
-                        <!-- Message 2 -->
-                        <div class="flex items-start">
-                            <img class="h-10 w-10 rounded-full mr-3 border border-gray-700" src="/api/placeholder/40/40"
-                                alt="Sender avatar">
-                            <div class="flex-1 bg-black rounded-lg p-3 border border-gray-800">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-medium">Alex Chen</span>
-                                    <span class="text-xs text-gray-400">Yesterday</span>
-                                </div>
-                                <p class="text-sm text-gray-300">Thanks for your help with the API integration. The team was really
-                                    impressed!</p>
+                        <button
+                            class="w-full mt-6 bg-black border border-gray-700 text-blue-400 hover:text-blue-300 py-2 rounded-lg">View
+                            All Messages</button>
+                    </div>
+                </div>
+
+                <!-- Network -->
+                <div class="mt-8 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                    <div class="border-b border-gray-800 px-6 py-4">
+                        <h3 class="text-lg font-medium">Network</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-3">
+                            <div class="flex flex-col items-center">
+                                <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
+                                    alt="Connection avatar">
+                                <span class="text-xs mt-2">Sarah M.</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
+                                    alt="Connection avatar">
+                                <span class="text-xs mt-2">Alex C.</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
+                                    alt="Connection avatar">
+                                <span class="text-xs mt-2">James L.</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
+                                    alt="Connection avatar">
+                                <span class="text-xs mt-2">Maya R.</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
+                                    alt="Connection avatar">
+                                <span class="text-xs mt-2">Daniel K.</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="h-12 w-12 rounded-full border border-gray-700 bg-gray-800 flex items-center justify-center text-gray-400">
+                                    +12</div>
+                                <span class="text-xs mt-2">More</span>
                             </div>
                         </div>
-                    </div>
-                    <button
-                        class="w-full mt-6 bg-black border border-gray-700 text-blue-400 hover:text-blue-300 py-2 rounded-lg">View
-                        All Messages</button>
-                </div>
-            </div>
-            
-            <!-- Network -->
-            <div class="mt-8 bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
-                <div class="border-b border-gray-800 px-6 py-4">
-                    <h3 class="text-lg font-medium">Network</h3>
-                </div>
-                <div class="p-6">
-                    <div class="flex flex-wrap gap-3">
-                        <div class="flex flex-col items-center">
-                            <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
-                                alt="Connection avatar">
-                            <span class="text-xs mt-2">Sarah M.</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
-                                alt="Connection avatar">
-                            <span class="text-xs mt-2">Alex C.</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
-                                alt="Connection avatar">
-                            <span class="text-xs mt-2">James L.</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
-                                alt="Connection avatar">
-                            <span class="text-xs mt-2">Maya R.</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <img class="h-12 w-12 rounded-full border border-gray-700" src="/api/placeholder/48/48"
-                                alt="Connection avatar">
-                            <span class="text-xs mt-2">Daniel K.</span>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="h-12 w-12 rounded-full border border-gray-700 bg-gray-800 flex items-center justify-center text-gray-400">
-                                +12</div>
-                            <span class="text-xs mt-2">More</span>
-                        </div>
-                    </div>
-                    <button
-                        class="w-full mt-6 bg-black border border-gray-700 text-blue-400 hover:text-blue-300 py-2 rounded-lg">Grow
-                        Your Network</button>
-                </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            
-            <!-- Footer -->
-            <footer class="bg-[#0A0A0A] border-t border-gray-800 py-6 mt-12">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-col md:flex-row justify-between items-center">
-                        <div class="mb-4 md:mb-0">
-                            <p class="text-gray-400 text-sm">&copy; 2025 StartupConnect. All rights reserved.</p>
-                        </div>
-                        <div class="flex space-x-6">
-                            <a href="#" class="text-gray-400 hover:text-white">
-                                <span class="sr-only">Terms</span>
-                                <span class="text-sm">Terms of Service</span>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white">
-                                <span class="sr-only">Privacy</span>
-                                <span class="text-sm">Privacy Policy</span>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white">
-                                <span class="sr-only">Support</span>
-                                <span class="text-sm">Support</span>
-                            </a>
-                        </div>
+                        <button
+                            class="w-full mt-6 bg-black border border-gray-700 text-blue-400 hover:text-blue-300 py-2 rounded-lg">Grow
+                            Your Network</button>
                     </div>
                 </div>
-            </footer>
-            </body>
-            
-            </html>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A0A0A] border-t border-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400 text-sm">&copy; 2025 ElevateX. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Terms</span>
+                        <span class="text-sm">Terms of Service</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Privacy</span>
+                        <span class="text-sm">Privacy Policy</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Support</span>
+                        <span class="text-sm">Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
