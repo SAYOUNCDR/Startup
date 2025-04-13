@@ -2071,7 +2071,7 @@
 
 
                 <!-- FAQ Item 3 -->
-                <div class="border border-gray-600 rounded-lg bg-[#0b0b0d] overflow-hidden ">
+                <div class="border border-gray-600 rounded-lg bg-gradient-to-br from-gray-900 to-black overflow-hidden ">
                     <button class="flex items-center justify-between w-full p-5 text-left cursor-pointer"
                         onclick="toggleAccordion('faq-3')">
                         <span class="text-white font-medium">How can collaborators help startups on your
@@ -2091,7 +2091,7 @@
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="border border-gray-600 rounded-lg bg-[#0b0b0d] overflow-hidden">
+                <div class="border border-gray-600 rounded-lg bg-gradient-to-br from-gray-900 to-black overflow-hidden">
                     <button class="flex items-center justify-between w-full p-5 text-left cursor-pointer"
                         onclick="toggleAccordion('faq-4')">
                         <span class="text-white font-medium">Is there a cost to join the platform?</span>
@@ -2110,7 +2110,7 @@
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <div class="border border-gray-600 rounded-lg bg-[#0b0b0d] overflow-hidden">
+                <div class="border border-gray-600 rounded-lg bg-gradient-to-br from-gray-900 to-black overflow-hidden">
                     <button class="flex items-center justify-between w-full p-5 text-left cursor-pointer"
                         onclick="toggleAccordion('faq-5')">
                         <span class="text-white font-medium">How do you verify startups and investors on the
