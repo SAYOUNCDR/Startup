@@ -75,7 +75,7 @@ session_start();
           <p class="text-gray-400">Help startups grow by contributing your expertise</p>
         </div>
 
-        <form id="signupForm" class="space-y-6" method="POST" action="../../config/addCollaborator.php">
+        <form id="signupForm" class="space-y-6" action="../../config/addCollaborator.php" method="POST">
           <!-- Two Column Layout for Personal Info -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -174,7 +174,7 @@ session_start();
 
           <div>
             <label class="block mb-2 font-medium">Collaboration Preferences</label>
-            <div class="space-y-2">
+            <!-- <div class="space-y-2">
               <div class="flex items-center">
                 <input type="checkbox" id="mentoring"
                   class="w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-pink-500" />
@@ -206,7 +206,9 @@ session_start();
                   Potential investment interest
                 </label>
               </div>
-            </div>
+            </div> -->
+            <input type="text" name="preferences" id="preferences" class="bg-gray-800 border border-gray-700 rounded-lg w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="Enter your preferences" />
           </div>
 
           <div class="flex items-center">
@@ -218,8 +220,8 @@ session_start();
             </label>
           </div>
 
-          <button type="submit" name="submit" value="submit"
-            class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-lg flex items-center justify-center">
+          <button type="submit"
+            class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-lg flex items-center justify-center cursor-pointer">
             Create Collaborator Account
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd"
@@ -305,64 +307,6 @@ session_start();
   </div>
 
   <script>
-    document.getElementById('signupForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Get form values
-      const firstName = document.getElementById('firstName').value;
-      const lastName = document.getElementById('lastName').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-
-      // Basic validation
-      if (password !== confirmPassword) {
-        alert('Passwords do not match!');
-        return;
-      }
-
-      // Get expertise (multiple select)
-      const expertiseSelect = document.getElementById('expertise');
-      const selectedExpertise = Array.from(expertiseSelect.selectedOptions).map(option => option.value);
-
-      // Get collaboration preferences (checkboxes)
-      const mentoring = document.getElementById('mentoring').checked;
-      const projectBased = document.getElementById('projectBased').checked;
-      const advisor = document.getElementById('advisor').checked;
-      const investment = document.getElementById('investment').checked;
-
-      // Collect all form data
-      const formData = {
-        firstName,
-        lastName,
-        email,
-        password,
-        title: document.getElementById('title').value,
-        company: document.getElementById('company').value,
-        expertise: selectedExpertise,
-        experience: document.getElementById('experience').value,
-        bio: document.getElementById('bio').value,
-        linkedin: document.getElementById('linkedin').value,
-        collaborationPreferences: {
-          mentoring,
-          projectBased,
-          advisor,
-          investment
-        },
-        termsAccepted: document.getElementById('terms').checked
-      };
-
-      // Normally would send these to your backend
-      console.log('Signup data:', formData);
-
-      // Show a simple alert for demo purposes
-      alert('Thank you for signing up as an ElevateX collaborator! Once approved, you\'ll be matched with startups that could benefit from your expertise.');
-    });
-
-
-
-
-
     // Function to toggle password visibility
     function togglePassword() {
       var passwordField = document.getElementById("password");

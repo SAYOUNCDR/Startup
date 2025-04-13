@@ -12,10 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $experience = $_POST['experience'];
     $bio = $_POST['bio'];
     $linkedin = $_POST['linkedin'];
-    $preferences = implode(", ", $_POST['preferences']); // Assuming preferences is an array (checkboxes)
+    $preferences = $_POST['preferences']; 
 
-    $sql = "INSERT INTO collaborators (first_name, last_name, email, password, title, company, expertise, experience, bio, linkedin, preferences)
-            VALUES ('$first_name', '$last_name', '$email', '$password', '$title', '$company', '$expertise', '$experience', '$bio', '$linkedin', '$preferences')";
+    $sql = "INSERT INTO collaborators (first_name, last_name, email, password, title, company, expertise, experience_level, bio, linkedin, preferences)
+            VALUES 
+            ('$first_name', '$last_name', '$email', '$password', '$title', '$company', '$expertise', '$experience', '$bio', '$linkedin', '$preferences')";
 
     if (mysqli_query($conn, $sql)) {
         echo "<script>alert('Registration successful!'); window.location.href = '../SignUps/login/index.php';</script>";

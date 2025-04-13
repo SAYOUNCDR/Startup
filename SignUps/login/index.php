@@ -70,7 +70,7 @@ if (isset($_POST['login'])) {
           $_SESSION['bio'] = $row['bio'];
           $_SESSION['linkedin'] = $row['linkedin'];
           // $_SESSION['preferences'] = $row['preferences'];
-          header("Location: ../../Dashboards/collaborators.php");
+          header("Location: ../../Dashboards/contributors.php");
           exit();
         } else {
           echo "<script>alert('Invalid password. Please try again.');</script>";
