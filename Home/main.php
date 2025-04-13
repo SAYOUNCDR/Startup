@@ -405,8 +405,9 @@
 
 
             <a href="#" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
-            <a href="../Listingpage/Startup/startups.html"
-                class="text-white hover:text-gray-300 transition-colors">Startups</a>
+            <a href="../Listingpage/Startup/startups.php"
+                class="text-white hover:text-gray-300 transition-colors">Startups
+            </a>
 
             <a href="#" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
             <a href="#" class="text-white hover:text-gray-300 transition-colors">Events</a>
@@ -438,7 +439,7 @@
                                     <ul class="space-y-6">
                                         <li>
                                             <h3 class="text-sm font-medium text-white">Founders</h3>
-                                            <a href="../Listingpage/Founder/Founders.html">
+                                            <a href="../Listingpage/Founder/Founders.php">
                                                 <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Helping
                                                     founders connect, collaborate, and
                                                     scale their visionary startups.</p>
@@ -446,10 +447,12 @@
                                         </li>
                                         <li>
                                             <h3 class="text-sm font-medium text-white">Investors</h3>
-                                            <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
-                                                investors to fund startups with
-                                                seamless and strategic connections
-                                            </p>
+                                            <a href="../Listingpage/Startup/startups.php">
+                                                <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
+                                                    investors to fund startups with
+                                                    seamless and strategic connections
+                                                </p>
+                                            </a>
                                         </li>
                                         <li>
                                             <h3 class="text-sm font-medium text-white">Contibuters</h3>
@@ -486,7 +489,7 @@
                         </g>
                     </g>
                 </svg>
-                <span class="ml-2">Log in</span>
+                <span class="ml-2"><a href="../SignUps/login/index.php">Log in</a></span>
             </button>
 
             <!-- Join Now Button -->
@@ -502,11 +505,11 @@
                     <h2 class="text-xl font-semibold mb-4 text-center">Join As</h2>
                     <div class="flex flex-col gap-3">
                         <button
-                            class="bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/startup/index.html">Startup</a></button>
+                            class="bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/startup/index.php">Startup</a></button>
                         <button
-                            class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/collaborators/index.html">Collaborator</a></button>
+                            class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/collaborators/index.php">Collaborator</a></button>
                         <button
-                            class="bg-green-600 hover:bg-green-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/investor/index.html">Investor</a></button>
+                            class="bg-green-600 hover:bg-green-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/investor/index.php">Investor</a></button>
                     </div>
                     <button onclick="toggleModal()"
                         class="mt-6 text-sm text-gray-400 hover:text-white transition text-center block mx-auto cursor-pointer">Cancel</button>
@@ -1760,7 +1763,7 @@
                 <div class="bg-[#0b0b0d] border border-gray-600 rounded-xl overflow-hidden transition-transform duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                     <div class="relative">
                         <div class="h-48 bg-gray-800 flex items-center justify-center">
-                            <img src="../gradient.png" alt="EcoTech Solutions" class="object-cover h-full w-full">
+                            <img src="../Images/nav-img-2.jpg" alt="EcoTech Solutions" class="object-cover h-full w-full">
                         </div>
                         <div
                             class="absolute top-4 right-4 bg-[#E94560] text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -1796,7 +1799,7 @@
                     class="bg-[#0b0b0d] border border-gray-600 rounded-xl overflow-hidden transition-transform duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                     <div class="relative">
                         <div class="h-48 bg-gray-800 flex items-center justify-center">
-                            <img src="../gradient.png" alt="MediSync" class="object-cover h-full w-full">
+                            <img src="../Images/nav-img-2.jpg" alt="MediSync" class="object-cover h-full w-full">
                         </div>
                         <div
                             class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -1833,7 +1836,7 @@
                     class="bg-[#0b0b0d] border border-gray-600 rounded-xl overflow-hidden transition-transform duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                     <div class="relative">
                         <div class="h-48 bg-gray-800 flex items-center justify-center">
-                            <img src="../gradient.png" alt="FinLeap" class="object-cover h-full w-full">
+                            <img src="../Images/nav-img-2.jpg" alt="FinLeap" class="object-cover h-full w-full">
                         </div>
                         <div
                             class="absolute top-4 right-4 bg-cyan-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
