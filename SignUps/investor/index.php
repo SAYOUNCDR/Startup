@@ -66,7 +66,7 @@
     <!-- Signup Card -->
     <div class="w-full max-w-2xl">
       <div class="bg-gray-900/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-800">
-       
+
 
         <!-- Modified sections of the code - Replace the form section with this -->
 
@@ -75,36 +75,37 @@
           <p class="text-gray-400">Join ElevateX to discover and invest in promising startups</p>
         </div>
 
-        <form id="signupForm" class="space-y-6">
+        <form id="signupForm" class="space-y-6" action="../../config/addInvestor.php" method="POST">
           <!-- Personal Information -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="fullName" class="block mb-2 font-medium">Full Name</label>
-              <input type="text" id="fullName"
+              <input type="text" id="fullName" name="full_name"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="John Smith" required />
             </div>
 
             <div>
               <label for="email" class="block mb-2 font-medium">Email Address</label>
-              <input type="email" id="email"
+              <input type="email" id="email" name="email"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="investor@example.com" required />
             </div>
 
             <div>
               <label for="password" class="block mb-2 font-medium">Password</label>
-              <input type="password" id="password"
+              <input type="password" id="password" name="password"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="••••••••" required />
+              <input type="checkbox" onclick="togglePassword()"> Show Password<br>
             </div>
 
-            <div>
+            <!-- <div>
               <label for="confirmPassword" class="block mb-2 font-medium">Confirm Password</label>
               <input type="password" id="confirmPassword"
                 class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="••••••••" required />
-            </div>
+            </div> -->
           </div>
 
           <!-- Professional Information -->
@@ -114,21 +115,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="organization" class="block mb-2 font-medium">Organization/Firm</label>
-                <input type="text" id="organization"
+                <input type="text" id="organization" name="organization"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="Venture Capital Firm Name" />
               </div>
 
               <div>
                 <label for="position" class="block mb-2 font-medium">Position/Title</label>
-                <input type="text" id="position"
+                <input type="text" id="position" name="title"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="Managing Partner" required />
               </div>
 
               <div>
                 <label for="investorType" class="block mb-2 font-medium">Investor Type</label>
-                <select id="investorType"
+                <select id="investorType" name="investor_type"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select investor type</option>
@@ -144,7 +145,7 @@
 
               <div>
                 <label for="linkedIn" class="block mb-2 font-medium">LinkedIn Profile</label>
-                <input type="url" id="linkedIn"
+                <input type="url" id="linkedIn" name="linkedin"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="https://linkedin.com/in/yourprofile" required />
               </div>
@@ -158,7 +159,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="investmentStage" class="block mb-2 font-medium">Preferred Investment Stage</label>
-                <select id="investmentStage"
+                <select id="investmentStage" name="investment_stage"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="pre-seed">Pre-Seed</option>
@@ -172,7 +173,7 @@
 
               <div>
                 <label for="investmentRange" class="block mb-2 font-medium">Typical Investment Range</label>
-                <select id="investmentRange"
+                <select id="investmentRange" name="investment_range"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select range</option>
@@ -186,7 +187,7 @@
 
               <div class="md:col-span-2">
                 <label for="sectors" class="block mb-2 font-medium">Preferred Sectors</label>
-                <select id="sectors"
+                <select id="sectors" name="sectors"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="fintech">FinTech</option>
@@ -205,7 +206,7 @@
 
               <div class="md:col-span-2">
                 <label for="investmentThesis" class="block mb-2 font-medium">Investment Thesis</label>
-                <textarea id="investmentThesis" rows="3"
+                <textarea id="investmentThesis" rows="3" name="thesis"
                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="Briefly describe your investment strategy and what you look for in startups..."
                   required></textarea>
@@ -219,7 +220,7 @@
 
             <div class="space-y-4">
               <div class="flex items-start">
-                <input type="checkbox" id="accredited"
+                <input type="checkbox" id="accredited" name="is_accredited"
                   class="mt-1 w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-pink-500" required />
                 <label for="accredited" class="ml-2 text-sm text-gray-300">
                   I confirm that I am an accredited investor as defined by SEC regulations
@@ -317,27 +318,17 @@
     </svg>
   </div>
 
+
   <script>
-    document.getElementById('signupForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Form validation could be added here
-
-      // Collect form data
-      const formData = {
-        fullName: document.getElementById('fullName').value,
-        email: document.getElementById('email').value,
-        startupName: document.getElementById('startupName').value,
-        category: document.getElementById('category').value,
-        // Add other fields as needed
-      };
-
-      // Normally would send this data to your backend
-      console.log('Registration data:', formData);
-
-      // Show a simple alert for demo purposes
-      alert('Registration functionality would be implemented by your backend');
-    });
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      // Check the checkbox state
+      if (passwordField.type === "password") {
+        passwordField.type = "text"; // Show the password
+      } else {
+        passwordField.type = "password"; // Hide the password
+      }
+    }
   </script>
 </body>
 

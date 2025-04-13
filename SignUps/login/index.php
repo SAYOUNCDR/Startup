@@ -27,7 +27,33 @@ if (isset($_POST['login'])) {
       echo "<script>alert('Invalid password. Please try again.');</script>";
     }
   } else {
-    echo "<script>alert('No account found with that email. Please try again.');</script>";
+    // Check if the email exists in the investors table
+    $query = "SELECT * FROM investors WHERE email = '$email'";
+    $result = mysqli_query($conn, $query);
+    if(mysqli_num_rows($result) == 1) {
+      $row = mysqli_fetch_assoc($result);
+      if (password_verify($password, $row['password'])) {
+        $_SESSION['investor_id'] = $row['id'];
+        $_SESSION['investor_name'] = $row['full_name'];
+        $_SESSION['investor_email'] = $row['email'];
+        $_SESSION['organization'] = $row['organization'];
+        $_SESSION['title'] = $row['title'];
+        $_SESSION['investor_type'] = $row['investor_type'];
+        $_SESSION['linkedin'] = $row['linkedin'];
+        $_SESSION['investment_stage'] = $row['investment_stage'];
+        $_SESSION['investment_range'] = $row['investment_range'];
+        $_SESSION['sectors'] = $row['sectors'];
+        $_SESSION['thesis'] = $row['thesis'];
+        $_SESSION['is_accredited'] = $row['is_accredited'];
+
+        header("Location: ../../Dashboards/investors.php");
+        exit();
+      } else {
+        echo "<script>alert('Invalid password. Please try again.');</script>";
+      }
+    } else {
+      echo "<script>alert('Email not found. Please register first.');</script>";
+    }
   }
 }
 ?>
