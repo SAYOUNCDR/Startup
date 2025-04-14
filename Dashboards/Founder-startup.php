@@ -9,12 +9,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Founder Profile | ElevateX</title>
     <link rel="stylesheet" href="../output.css">
-    <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-        }
-    </style>
 </head>
 
 <body class="min-h-screen bg-black text-white">
@@ -95,7 +89,7 @@ session_start();
             <!-- Left Column - Personal Info & Stats -->
             <div class="space-y-8">
                 <!-- Personal Info -->
-                <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">About</h3>
                     </div>
@@ -161,25 +155,25 @@ session_start();
                 </div>
 
                 <!-- Founder Stats -->
-                <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="bg-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">Founder Stats</h3>
                     </div>
                     <div class="p-6">
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
+                            <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Startups Founded</p>
                                 <p class="text-2xl font-bold mt-1">3</p>
                             </div>
-                            <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
+                            <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Successful Exits</p>
                                 <p class="text-2xl font-bold mt-1">1</p>
                             </div>
-                            <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
+                            <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Total Fundraised</p>
                                 <p class="text-2xl font-bold mt-1">$<?php echo $_SESSION['funding_raised'] ?>M</p>
                             </div>
-                            <div class="bg-black rounded-lg p-4 border border-gray-800 shadow-inner">
+                            <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg p-4 border border-gray-800 shadow-inner">
                                 <p class="text-gray-400 text-sm">Team Members</p>
                                 <p class="text-2xl font-bold mt-1"><?php echo $_SESSION['company_size'] ?></p>
                             </div>
@@ -188,35 +182,35 @@ session_start();
                 </div>
 
                 <!-- Investors -->
-                <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4">
                         <h3 class="text-lg font-medium">Investors & Partners</h3>
                     </div>
                     <div class="p-6">
                         <div class="grid grid-cols-3 gap-4">
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden  border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden  border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden  border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden  border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                             <div
-                                class="bg-black rounded-lg p-3 border border-gray-800 flex items-center justify-center">
-                                <img class="h-10" src="/api/placeholder/80/30" alt="Investor logo">
+                                class="bg-black rounded-lg overflow-hidden  border border-gray-800 flex items-center justify-center">
+                                <img class="h-full w-full" src="../Images/nav-img-2.jpg" alt="Investor logo">
                             </div>
                         </div>
                     </div>
@@ -226,7 +220,7 @@ session_start();
             <!-- Middle Column - Current Startups -->
             <div class="space-y-8 lg:col-span-2">
                 <!-- Current Startups -->
-                <div class="bg-[#0A0A0A] rounded-xl shadow-lg border border-gray-800 overflow-hidden">
+                <div class="bg-black rounded-xl shadow-lg border border-gray-800 overflow-hidden">
                     <div class="border-b border-gray-800 px-6 py-4 flex justify-between items-center">
                         <h3 class="text-lg font-medium">Current Startups</h3>
                         <!-- Add new startup button -->
@@ -236,8 +230,8 @@ session_start();
                     </div>
                     <div class="p-6">
                         <!-- TechInnovate AI -->
-                        <div class="mb-8 bg-black rounded-xl border border-gray-800 overflow-hidden shadow-lg">
-                            <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center">
+                        <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800 overflow-hidden shadow-lg">
+                            <div class="px-6 py-4  flex flex-col sm:flex-row sm:items-center">
                                 <img class="h-16 w-16 rounded-lg border border-gray-700 mb-4 sm:mb-0 sm:mr-6"
                                     src="/api/placeholder/64/64" alt="Company logo">
                                 <div class="flex-1">
@@ -301,7 +295,7 @@ session_start();
                                 </div>
                             </div>
 
-                            <div class="px-6 py-3 bg-[#0A0A0A]">
+                            <div class="px-6 py-3 bg-black">
                                 <div class="flex justify-between">
                                     <a href="#" class="text-blue-400 text-sm font-medium hover:text-blue-300">View
                                         Details</a>

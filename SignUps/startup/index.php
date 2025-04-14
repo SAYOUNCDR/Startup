@@ -5,52 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElevateX - Startup Registration</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: {
-              900: '#0a0b13',
-              800: '#131726',
-              700: '#1c2037'
-            }
-          }
-        }
-      }
-    }
-  </script>
+ <link rel="stylesheet" href="../../output.css">
 </head>
 
 <body class="bg-black text-white min-h-screen flex flex-col relative">
-  <!-- Geometric Background Elements -->
-  <div class="absolute inset-0 overflow-hidden z-0">
-    <!-- Left side angular shape -->
-    <div class="absolute -left-20 top-0 h-full w-64 bg-purple-900/20 skew-x-12 transform"></div>
-
-    <!-- Right side angular shape -->
-    <div class="absolute -right-20 top-0 h-full w-64 bg-pink-900/20 -skew-x-12 transform"></div>
-
-    <!-- Hexagonal grid pattern (simplified with diagonal lines) -->
-    <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="hexagrid" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-          <path d="M0,30 L30,0 L60,30 L30,60 Z" fill="none" stroke="url(#gradient)" stroke-width="1" />
-        </pattern>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ff4b93" />
-          <stop offset="100%" stop-color="#9254e2" />
-        </linearGradient>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#hexagrid)" />
-    </svg>
-  </div>
 
   <!-- Header -->
   <header class="py-6 px-8 flex justify-between items-center relative z-10">
-    <a href="#" class="text-2xl font-bold text-white">ElevateX</a>
-    <a href="#" class="text-sm flex items-center">
+    <a href="../../Home/main.php" class="text-2xl font-bold text-white">ElevateX</a>
+    <a href="../login/index.php" class="text-sm flex items-center">
       <span class="mr-2">Already have an account?</span>
       <span class="text-pink-500 flex items-center">Log In
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -63,9 +26,10 @@
 
   <!-- Main Content -->
   <div class="flex-1 flex items-center justify-center px-4 relative z-10 py-8">
+
     <!-- Signup Card -->
     <div class="w-full max-w-2xl">
-      <div class="bg-gray-900/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-800">
+      <div class="bg-gradient-to-br from-gray-900 to-black backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-800">
         <div class="text-center mb-8">
           <h1 class="text-2xl font-bold mb-2">Register Your Startup</h1>
           <p class="text-gray-400">Join the ElevateX ecosystem and connect with investors</p>
@@ -78,21 +42,21 @@
             <div>
               <label for="fullName" class="block mb-2 font-medium">Founder's Full Name</label>
               <input type="text" id="fullName" name="fullName"
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="John Smith" required />
             </div>
 
             <div>
               <label for="email" class="block mb-2 font-medium">Email Address</label>
               <input type="email" id="email" name="email"
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="founder@startup.com" required />
             </div>
 
             <div>
               <label for="password" class="block mb-2 font-medium">Password</label>
               <input type="password" id="password" name="password"
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="••••••••" required />
             </div>
           </div>
@@ -105,47 +69,47 @@
               <div>
                 <label for="startupName" class="block mb-2 font-medium">Startup Name</label>
                 <input type="text" id="startupName" name="startupName"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="NextGen Solutions" required />
               </div>
 
               <div>
                 <label for="category" class="block mb-2 font-medium">Category</label>
                 <select id="category" name="category"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
-                  <option value="" disabled selected>Select a category</option>
-                  <option value="fintech">FinTech</option>
-                  <option value="healthtech">HealthTech</option>
-                  <option value="edtech">EdTech</option>
-                  <option value="ecommerce">E-Commerce</option>
-                  <option value="saas">SaaS</option>
-                  <option value="ai-ml">AI/ML</option>
-                  <option value="cleantech">CleanTech</option>
-                  <option value="biotech">BioTech</option>
-                  <option value="other">Other</option>
+                  <option value="" disabled selected class="text-black">Select a category</option>
+                  <option value="fintech" class="text-black">FinTech</option>
+                  <option value="healthtech" class="text-black">HealthTech</option>
+                  <option value="edtech" class="text-black">EdTech</option>
+                  <option value="ecommerce" class="text-black">E-Commerce</option>
+                  <option value="saas" class="text-black">SaaS</option>
+                  <option value="ai-ml" class="text-black">AI/ML</option>
+                  <option value="cleantech" class="text-black">CleanTech</option>
+                  <option value="biotech" class="text-black">BioTech</option>
+                  <option value="other" class="text-black">Other</option>
                 </select>
               </div>
 
               <div>
                 <label for="foundingDate" class="block mb-2 font-medium">Founding Date</label>
                 <input type="date" id="foundingDate" name="foundingDate"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required />
               </div>
 
               <div>
                 <label for="companySize" class="block mb-2 font-medium">Company Size</label>
                 <select id="companySize" name="companySize"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
-                  <option value="" disabled selected>Select team size</option>
-                  <option value="solo">Solo Founder</option>
-                  <option value="2-5">2-5 employees</option>
-                  <option value="6-10">6-10 employees</option>
-                  <option value="11-25">11-25 employees</option>
-                  <option value="26-50">26-50 employees</option>
-                  <option value="50+">50+ employees</option>
+                  <option value="" disabled selected class="text-black">Select team size</option>
+                  <option value="solo" class="text-black">Solo Founder</option>
+                  <option value="2-5" class="text-black">2-5 employees</option>
+                  <option value="6-10" class="text-black">6-10 employees</option>
+                  <option value="11-25" class="text-black">11-25 employees</option>
+                  <option value="26-50" class="text-black">26-50 employees</option>
+                  <option value="50+" class="text-black">50+ employees</option>
                 </select>
               </div>
             </div>
@@ -153,7 +117,7 @@
             <div class="mt-6">
               <label for="description" class="block mb-2 font-medium">Startup Description</label>
               <textarea id="description" rows="3" name="description"
-                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                 placeholder="Briefly describe what your startup does and the problem it solves..." required></textarea>
             </div>
           </div>
@@ -165,30 +129,30 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="fundingStage" class="block mb-2 font-medium">Current Funding Stage</label>
-                <select id="fundingStage"  name="fundingStage"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                <select id="fundingStage" name="fundingStage"
+                  class="w-full px-4 py-3 bg-gradient-to-br  from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   required>
                   <option value="" disabled selected>Select stage</option>
-                  <option value="bootstrap">Bootstrapped</option>
-                  <option value="pre-seed">Pre-Seed</option>
-                  <option value="seed">Seed</option>
-                  <option value="series-a">Series A</option>
-                  <option value="series-b">Series B</option>
-                  <option value="series-c">Series C or later</option>
+                  <option value="bootstrap" class="text-black">Bootstrapped</option>
+                  <option value="pre-seed" class="text-black">Pre-Seed</option>
+                  <option value="seed" class="text-black">Seed</option>
+                  <option value="series-a" class="text-black">Series A</option>
+                  <option value="series-b" class="text-black">Series B</option>
+                  <option value="series-c" class="text-black">Series C or later</option>
                 </select>
               </div>
 
               <div>
                 <label for="raisedAmount" class="block mb-2 font-medium">Funding Raised So Far</label>
                 <input type="text" id="raisedAmount" name="raisedAmount"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="$250,000" />
               </div>
 
               <div class="md:col-span-2">
                 <label for="seeking" class="block mb-2 font-medium">Currently Seeking</label>
                 <input type="text" id="seeking" name="seeking"
-                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                   placeholder="E.g., $500,000 seed funding, strategic partnerships, etc." />
               </div>
             </div>
@@ -197,7 +161,7 @@
           <!-- Terms and Conditions -->
           <div class="flex items-start pt-4">
             <input type="checkbox" id="terms"
-              class="mt-1 w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-pink-500" required />
+              class="mt-1 w-4 h-4 bg-gradient-to-br from-gray-900 to-black border-gray-700 rounded focus:ring-pink-500" required />
             <label for="terms" class="ml-2 text-sm text-gray-300">
               I agree to the <a href="#" class="text-pink-400 hover:underline">Terms of Service</a> and <a href="#"
                 class="text-pink-400 hover:underline">Privacy Policy</a>
@@ -219,7 +183,7 @@
           <div class="text-center mb-4 text-sm text-gray-400">Or register with</div>
           <div class="grid grid-cols-2 gap-4">
             <button
-              class="py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg flex items-center justify-center">
+              class="py-3 px-4 bg-gradient-to-br from-gray-900 to-black hover:bg-gray-700 text-white font-medium rounded-lg flex items-center justify-center">
               <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -227,7 +191,7 @@
               GitHub
             </button>
             <button
-              class="py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg flex items-center justify-center">
+              class="py-3 px-4 bg-gradient-to-br from-gray-900 to-black hover:bg-gray-700 text-white font-medium rounded-lg flex items-center justify-center">
               <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -247,11 +211,6 @@
             </button>
           </div>
         </div>
-      </div>
-
-      <!-- Additional decorative element -->
-      <div
-        class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full blur-xl opacity-20">
       </div>
     </div>
   </div>

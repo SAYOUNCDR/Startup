@@ -404,7 +404,7 @@
             <!-- exprtimental area -->
 
 
-            <a href="#" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
+            <a href="./aboutus.php" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
             <a href="../Listingpage/Startup/startups.php"
                 class="text-white hover:text-gray-300 transition-colors">Startups
             </a>
@@ -494,22 +494,22 @@
 
             <!-- Join Now Button -->
             <button onclick="toggleModal()"
-                class="bg-[#E94560] hover:bg-[#e73351] text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center cursor-pointer">
+                class="bg-gradient-to-r from-[#E94560] to-purple-600  text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center cursor-pointer">
                 Join Now
             </button>
 
             <!-- Modal -->
             <div id="joinModal"
-                class="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center z-50 hidden">
-                <div class="bg-gray-900 text-white p-6 rounded-xl w-80 shadow-lg">
+                class="fixed inset-0 bg-gradient-to-br from-gray-900 to-black bg-opacity-10 flex items-center justify-center z-50 hidden">
+                <div class="bg-gradient-to-tl from-gray-900 to-black border border-gray-700 text-white p-6 rounded-xl w-80 shadow-lg">
                     <h2 class="text-xl font-semibold mb-4 text-center">Join As</h2>
                     <div class="flex flex-col gap-3">
                         <button
-                            class="bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/startup/index.php">Startup</a></button>
+                            class="bg-gradient-to-r from-[#E94560] to-purple-600 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/startup/index.php">Startup</a></button>
                         <button
-                            class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/collaborators/index.php">Collaborator</a></button>
+                            class="bg-gradient-to-r from-[#E94560] to-purple-600 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/collaborators/index.php">Collaborator</a></button>
                         <button
-                            class="bg-green-600 hover:bg-green-700 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/investor/index.php">Investor</a></button>
+                            class="bg-gradient-to-r from-[#E94560] to-purple-600 py-2 px-4 rounded-md transition duration-200 cursor-pointer"><a href="../SignUps/investor/index.php">Investor</a></button>
                     </div>
                     <button onclick="toggleModal()"
                         class="mt-6 text-sm text-gray-400 hover:text-white transition text-center block mx-auto cursor-pointer">Cancel</button>
@@ -2003,13 +2003,13 @@
                             <div class="space-y-2">
                                 <label class="text-sm font-medium text-gray-300 pl-1">Full Name</label>
                                 <input type="text" placeholder="John Doe" name="fullName"
-                                    class="w-full px-4 py-3 bg-gray-800/80 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
+                                    class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
                                     required>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-medium text-gray-300 pl-1">Email Address</label>
                                 <input type="email" placeholder="john@example.com" name="email"
-                                    class="w-full px-4 py-3 bg-gray-800/80 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
+                                    class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
                                     required>
                             </div>
                         </div>
@@ -2017,14 +2017,14 @@
                         <div class="mb-6 space-y-2">
                             <label class="text-sm font-medium text-gray-300 pl-1">Subject</label>
                             <input type="text" placeholder="How can we help you?" name="subject"
-                                class="w-full px-4 py-3 bg-gray-800/80 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
+                                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200"
                                 required>
                         </div>
 
                         <div class="mb-6 space-y-2">
                             <label class="text-sm font-medium text-gray-300 pl-1">Your Message</label>
                             <textarea rows="5" placeholder="Tell us about your project..." name="message"
-                                class="w-full px-4 py-3 bg-gray-800/80 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200 resize-none"></textarea>
+                                class="w-full px-4 py-3 bg-gradient-to-br from-gray-900 to-black rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent text-gray-200 text-sm transition duration-200 resize-none"></textarea>
                         </div>
 
                         <div class="flex items-center mb-6">

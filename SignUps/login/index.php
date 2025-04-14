@@ -93,50 +93,14 @@ if (isset($_POST['login'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElevateX - Login</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: {
-              900: '#0a0b13',
-              800: '#131726',
-              700: '#1c2037'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="../../output.css">
 </head>
 
 <body class="bg-black text-white min-h-screen flex flex-col relative overflow-hidden">
-  <!-- Geometric Background Elements -->
-  <div class="absolute inset-0 overflow-hidden z-0">
-    <!-- Left side angular shape -->
-    <div class="absolute -left-20 top-0 h-full w-64 bg-purple-900/20 skew-x-12 transform"></div>
 
-    <!-- Right side angular shape -->
-    <div class="absolute -right-20 top-0 h-full w-64 bg-pink-900/20 -skew-x-12 transform"></div>
-
-    <!-- Hexagonal grid pattern (simplified with diagonal lines) -->
-    <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="hexagrid" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-          <path d="M0,30 L30,0 L60,30 L30,60 Z" fill="none" stroke="url(#gradient)" stroke-width="1" />
-        </pattern>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ff4b93" />
-          <stop offset="100%" stop-color="#9254e2" />
-        </linearGradient>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#hexagrid)" />
-    </svg>
-  </div>
   <!-- Header -->
   <header class="py-6 px-8 flex justify-between items-center relative z-10">
-    <a href="#" class="text-2xl font-bold text-white">ElevateX</a>
+    <a href="../../Home/main.php" class="text-2xl font-bold text-white">ElevateX</a>
     <a href="#" class="text-sm flex items-center">
       <span class="mr-2">Don't have an account?</span>
       <span class="text-pink-500 flex items-center">Join Now
@@ -151,7 +115,7 @@ if (isset($_POST['login'])) {
   <div class="flex-1 flex items-center justify-center px-4 relative z-10">
     <!-- Login Card -->
     <div class="w-full max-w-md">
-      <div class="bg-gray-900/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-800">
+      <div class="bg-gradient-to-br from-gray-900 to-black backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-800">
         <div class="text-center mb-8">
           <h1 class="text-2xl font-bold mb-2">Log in to ElevateX</h1>
           <p class="text-gray-400">Access your startup ecosystem dashboard</p>
@@ -164,7 +128,7 @@ if (isset($_POST['login'])) {
               type="email"
               id="email"
               name="email"
-              class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+              class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg "
               placeholder="name@company.com"
               required />
           </div>
@@ -178,7 +142,7 @@ if (isset($_POST['login'])) {
               type="password"
               id="password"
               name="password"
-              class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+              class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg "
               placeholder="••••••••"
               required />
 
@@ -253,9 +217,6 @@ if (isset($_POST['login'])) {
       </defs>
     </svg>
   </div>
-
-
-
 
   <script>
     function togglePassword() {
