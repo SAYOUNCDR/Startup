@@ -161,36 +161,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Tab Switching JavaScript {User category section}
-function changeTab(tabId) {
-  // Hide all tab contents
-  document.querySelectorAll(".tab-content").forEach((content) => {
-    content.classList.add("hidden");
-  });
-
-  // Show the selected tab content
-  document.getElementById(tabId).classList.remove("hidden");
-
-  // Update active button styles
-  document.querySelectorAll(".tab-button").forEach((button) => {
-    if (button.getAttribute("onclick").includes(tabId)) {
-      button.classList.remove(
-        "bg-[#0b0b0d]",
-        "text-gray-300",
-        "border",
-        "border-gray-600",
-        "hover:border-[#E94560]"
-      );
-      button.classList.add("bg-[#E94560]", "text-white");
-    } else {
-      button.classList.remove("bg-[#E94560]", "text-white");
-      button.classList.add(
-        "bg-[#0b0b0d]",
-        "text-gray-300",
-        "border",
-        "border-gray-600",
-        "hover:border-[#E94560]"
-      );
-    }
-  });
-}
