@@ -97,6 +97,18 @@
             background-size: 200% 200%;
             animation: gradientShift 4s ease infinite;
         }
+
+
+        /* Right svg hide on small screen */
+        #my-element {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            #my-element {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -151,7 +163,7 @@
         <div class="flex items-center">
             <a href="/" class="flex items-center">
                 <!-- Logo -->
-                <span class="text-white text-2xl font-bold ml-2">ElevateX</span>
+                <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ml-2">ElevateX</span>
             </a>
         </div>
 
@@ -409,8 +421,8 @@
                 class="text-white hover:text-gray-300 transition-colors">Startups
             </a>
 
-            <a href="#" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
-            <a href="#" class="text-white hover:text-gray-300 transition-colors">Events</a>
+            <a href="../Pitch/pitch.php" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
+            <a href="../Eventpage/events.php" class="text-white hover:text-gray-300 transition-colors">Events</a>
 
             <!-- Dropdown Menus -->
             <div class="relative group">
@@ -447,7 +459,7 @@
                                         </li>
                                         <li>
                                             <h3 class="text-sm font-medium text-white">Investors</h3>
-                                            <a href="../Listingpage/Startup/startups.php">
+                                            <a href="#">
                                                 <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
                                                     investors to fund startups with
                                                     seamless and strategic connections
@@ -456,9 +468,12 @@
                                         </li>
                                         <li>
                                             <h3 class="text-sm font-medium text-white">Contibuters</h3>
-                                            <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Join as a
-                                                contributor to support startups
-                                                with skills, ideas, and expertise.</p>
+                                            <a href="#">
+                                                <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Join as a
+                                                    contributor to support startups
+                                                    with skills, ideas, and expertise.
+                                                </p>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -472,6 +487,7 @@
         </div>
 
         <!-- Auth Buttons -->
+
         <div class="flex items-center space-x-6">
             <button class="text-white hover:text-gray-300 flex items-center transition-colors cursor-pointer">
                 <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -493,7 +509,7 @@
             </button>
 
             <!-- Join Now Button -->
-            <button onclick="toggleModal()"
+            <button onclick="toggleModal()" id="joinButton"
                 class="bg-gradient-to-r from-[#E94560] to-purple-600  text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center cursor-pointer">
                 Join Now
             </button>
@@ -549,20 +565,6 @@
                         style=" white-space: nowrap;overflow: hidden; color: #E94560; font-weight: 700; border-right: 1px solid white; padding-left: 4px;"></span>
                 </p>
             </div>
-
-            <!-- CTA Button -->
-            <!-- <div class="text-center">
-                <a href="#"
-                    class="inline-flex items-center bg-[#E94560] hover:bg-[#e73351] text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                    Join Now
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div> -->
-
         </div>
 
 
@@ -1086,11 +1088,12 @@
 
 
         <!-- Right SVG Hexagon -->
-        <div class="absolute right-0 top-0 w-[80%] h-full opacity-60 transform translate-x-2/4">
+        <div class="absolute right-0 top-0 w-[80%] h-full opacity-60 transform translate-x-2/4" id="my-element">
             <div class="gradient-hexagon lower" data-animation-type="lottie">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 1080 1080" width="1080" height="1080" preserveAspectRatio="xMidYMid meet"
-                    style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+                    style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"
+                    class="sm:hidden md:none lg:block">
                     <defs>
                         <clipPath id="__lottie_element_412">
                             <rect width="1080" height="1080" x="0" y="0"></rect>
@@ -1189,7 +1192,7 @@
             <div class="relative">
                 <div id="startups" class="tab-content">
                     <div class="grid md:grid-cols-3 gap-8 items-center">
-
+                        <!-- Startup -->
                         <div class="md:col-span-1">
                             <div class="bg-gradient-to-br from-[#E94560] to-purple-500 p-1 rounded-2xl">
                                 <div class="bg-[#0b0b0d] rounded-2xl p-6 h-full">
@@ -1230,7 +1233,7 @@
                                             Skilled collaborators
                                         </li>
                                     </ul>
-                                    <a href="#"
+                                    <a href="../SignUps/startup/index.php"
                                         class="inline-flex items-center text-[#E94560] hover:text-white hover:bg-[#E94560] border border-[#E94560] px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
                                         Create Startup Profile
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none"
@@ -1242,7 +1245,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- investor -->
                         <div class="md:col-span-1">
                             <div class="bg-gradient-to-br from-cyan-500 to-blue-600 p-1 rounded-2xl">
                                 <div class="bg-[#0b0b0d] rounded-2xl p-6 h-full">
@@ -1283,7 +1286,7 @@
                                             Due diligence tools
                                         </li>
                                     </ul>
-                                    <a href="#"
+                                    <a href="../SignUps/investor/index.php"
                                         class="inline-flex items-center text-cyan-500 hover:text-white hover:bg-cyan-500 border border-cyan-500 px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
                                         Join as Investor
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none"
@@ -1295,12 +1298,12 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- collaborator -->
                         <div class="md:col-span-1">
-                            <div class="bg-gradient-to-br from-green-500 to-teal-600 p-1 rounded-2xl">
+                            <div class="bg-gradient-to-br from-purple-500 to-[#E94560] p-1 rounded-2xl">
                                 <div class="bg-[#0b0b0d] rounded-2xl p-6 h-full">
                                     <div class="mb-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-green-500"
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-purple-500"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -1312,7 +1315,7 @@
                                         professional network.</p>
                                     <ul class="space-y-3 text-gray-300 mb-8">
                                         <li class="flex items-center">
-                                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
+                                            <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M5 13l4 4L19 7"></path>
@@ -1320,7 +1323,7 @@
                                             Showcase your skills
                                         </li>
                                         <li class="flex items-center">
-                                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
+                                            <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M5 13l4 4L19 7"></path>
@@ -1328,7 +1331,7 @@
                                             Find exciting projects
                                         </li>
                                         <li class="flex items-center">
-                                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
+                                            <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M5 13l4 4L19 7"></path>
@@ -1336,8 +1339,8 @@
                                             Build your portfolio
                                         </li>
                                     </ul>
-                                    <a href="#"
-                                        class="inline-flex items-center text-green-500 hover:text-white hover:bg-green-500 border border-green-500 px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
+                                    <a href="../SignUps/collaborators/index.php"
+                                        class="inline-flex items-center text-purple-500 hover:text-white  border border-purple-500 hover:bg-purple-500 px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">
                                         Create Collaborator Profile
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -1484,7 +1487,7 @@
 
             <!-- View All Button -->
             <div class="mt-12 text-center">
-                <a href="#"
+                <a href="../Listingpage/Startup/startups.php"
                     class="inline-flex items-center justify-center px-6 py-3 mx-auto text-white font-medium border border-gray-600 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-[#E94560]/20">
                     Explore All Startups
                 </a>
@@ -1496,7 +1499,7 @@
 
 
     <!-- contact us section -->
-    <div class="bg-black text-white py-16">
+    <div class="bg-black text-white py-16" id="contact">
         <div class="container mx-auto px-4 max-w-5xl">
             <!-- Section Header -->
             <div class="text-center mb-12">
@@ -1665,7 +1668,7 @@
 
 
     <!-- Accoordian FAQ -->
-    <section class="bg-[#000000] py-12 px-4">
+    <section class="bg-[#000000] py-12 px-4" id="faq">
         <div class="container mx-auto max-w-4xl">
             <!-- Section Header -->
             <div class="text-center mb-10">

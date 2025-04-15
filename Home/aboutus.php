@@ -21,8 +21,8 @@
             <h1 class="text-5xl font-bold mb-6">About <span class="bg-gradient-to-r from-[#E94560] to-purple-600 bg-clip-text text-transparent">ElevateX</span></h1>
             <p class="text-xl text-gray-300 mb-10">Connecting visionaries, building the future of entrepreneurship</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#" class="bg-gradient-to-r from-[#E94560] to-purple-600 px-8 py-3 rounded-lg font-medium transition-colors">Join Our Ecosystem</a>
-                <a href="#" class="border border-gray-700 hover:border-purple-500 px-8 py-3 rounded-lg font-medium transition-all">Learn More</a>
+                <a href="./main.php#joinButton" class="bg-gradient-to-r from-[#E94560] to-purple-600 px-8 py-3 rounded-lg font-medium transition-colors">Join Our Ecosystem</a>
+                <a href="#faq" class="border border-gray-700 hover:border-purple-500 px-8 py-3 rounded-lg font-medium transition-all">Learn More</a>
             </div>
         </div>
     </section>
@@ -46,7 +46,7 @@
     </section>
 
     <!-- Accordion Section -->
-    <section class="px-8 md:px-16 py-12" x-data="{
+    <section id="faq" class="px-8 md:px-16 py-12" x-data="{
         activeAccordion: 'mission',
         toggleAccordion(id) {
             this.activeAccordion = this.activeAccordion === id ? null : id
@@ -292,7 +292,7 @@
             <p class="text-xl text-gray-300 mb-8">Whether you're a founder, investor, mentor, or collaborator, there's a place for you in our ecosystem.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#" class="bg-gradient-to-r from-[#E94560] to-purple-600 px-8 py-3 rounded-lg font-medium transition-colors">Join Now</a>
-                <a href="#" class="bg-transparent border border-gray-700 hover:border-purple-500 px-8 py-3 rounded-lg font-medium transition-all">Contact Us</a>
+                <a href="./main.php#contact" class="bg-transparent border border-gray-700 hover:border-purple-500 px-8 py-3 rounded-lg font-medium transition-all">Contact Us</a>
             </div>
         </div>
     </section>

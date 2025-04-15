@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $sql);
 
 <body class="bg-black">
     <!-- Body starts from here -->
-    <div class="bg-black min-h-screen flex flex-col items-center justify-center text-white p-4">
+    <div class="bg-black min-h-screen flex flex-col items-center justify-center text-white p-4" style="background-image: url('../../Images/featured-event.jpg') ; background-repeat: no-repeat; width: 100%; height: 100vh; background-size: cover; opacity: 0.8;">
         <div class="text-center max-w-4xl">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">
                 Fueling
@@ -292,21 +292,21 @@ $result = mysqli_query($conn, $sql);
                             $funding_raised = $row['funding_raised'];
                             $currently_seeking = $row['currently_seeking'];
 
-                            $cover_img = "../../Images/nav-img-2.jpg";
-                            $avatar_img = "../../Images/nav-img-1.png";
+                            $cover_img = "../../Images/events-03.jpg";
+                            $avatar_img = "../../Images/events-02.jpg";
                             echo '
                                 <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden border border-gray-900 hover:border-gray-700 transition duration-300">
                                     <div class="relative">
                                         <img src="' . $cover_img . '" alt="Startup Banner" class="w-full h-40 object-cover">
                                         <div
                                             class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                                            <h2 class="text-white text-xl font-semibold">' . $startup_name. '</h2>
+                                            <h2 class="text-white text-xl font-semibold">' . $startup_name . '</h2>
                                             <p class="text-gray-300 text-sm">' . $category . '</p>
                                         </div>
                                     </div>
                                     <div class="p-4">
                                         <div class="flex items-center mb-3">
-                                            <img src="/api/placeholder/32/32" alt="Startup Logo" class="w-8 h-8 rounded">
+                                            <img src="' . $avatar_img . '" alt="Startup Logo" class="w-8 h-8 rounded border border-gray-500">
                                             <span class="ml-2 text-white font-medium">' . $startup_name . '</span>
                                         </div>
                                         <p class="text-gray-400 text-sm mb-4">
