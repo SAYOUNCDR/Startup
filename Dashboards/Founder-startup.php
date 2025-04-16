@@ -17,7 +17,7 @@ session_start();
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <div class="text-xl font-bold">ElevateX</div>
+                    <div class="text-xl font-bold"><a href="../Home/main.php">ElevateX</a></div>
                 </div>
                 <div class="flex items-center space-x-4">
                     <button class="p-1 rounded text-gray-400 hover:text-white focus:outline-none">
