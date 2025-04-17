@@ -12,7 +12,7 @@
     <!-- Fixed Left Sidebar -->
     <div class="w-80 bg-black border-r border-gray-800 p-6 h-full overflow-y-auto fixed left-0 top-0">
         <!-- Back Link -->
-        <a href="../Startup/startups.html" class="flex items-center text-gray-400 hover:text-white mb-8">
+        <a href="../Startup/startups.php" class="flex items-center text-gray-400 hover:text-white mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -66,11 +66,11 @@
         <div class="flex gap-3 mt-8">
             <button
                 class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded font-medium transition-colors">
-                Contact
+                Website
             </button>
             <button
                 class="bg-transparent border border-gray-700 hover:border-gray-500 text-white px-6 py-2 rounded font-medium transition-colors">
-                Save Profile
+                Project Repo
             </button>
         </div>
     </div>
@@ -78,8 +78,9 @@
     <!-- Scrollable Main Content -->
     <div class="flex-1 p-6 overflow-y-auto ml-80">
 
-        <div class="w-[100%] h-100 bg-gradient-to-br from-gray-900 to-black rounded-lg mb-10 border border-gray-700">
+        <div class="w-[100%] h-100 bg-gradient-to-br from-gray-900 to-black rounded-lg mb-10 border border-gray-700 overflow-hidden">
             <!-- image div -->
+             <img src="../../Images/events-06.jpg" alt="" class="w-full h-100 rounded-lg object-cover">
 
         </div>
         <!-- Metrics Cards -->
@@ -188,7 +189,7 @@
                 <!-- Team Member 1 -->
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden mr-4">
-                        <img src="/api/placeholder/48/48" alt="Sarah Chen" class="w-full h-full object-cover">
+                        <img src="../../Images/user-01.jpg" alt="Sarah Chen" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h4 class="font-medium">Sarah Chen</h4>
@@ -199,7 +200,7 @@
                 <!-- Team Member 2 -->
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden mr-4">
-                        <img src="/api/placeholder/48/48" alt="Michael Rodriguez" class="w-full h-full object-cover">
+                        <img src="../../Images/user-01.jpg" alt="Michael Rodriguez" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h4 class="font-medium">Michael Rodriguez</h4>
@@ -210,7 +211,7 @@
                 <!-- Team Member 3 -->
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden mr-4">
-                        <img src="/api/placeholder/48/48" alt="Jessica Kim" class="w-full h-full object-cover">
+                        <img src="../../Images/user-01.jpg" alt="Jessica Kim" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h4 class="font-medium">Jessica Kim</h4>

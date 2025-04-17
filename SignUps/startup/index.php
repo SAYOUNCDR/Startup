@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElevateX - Startup Registration</title>
- <link rel="stylesheet" href="../../output.css">
+  <link rel="stylesheet" href="../../output.css">
 </head>
 
 <body class="bg-black text-white min-h-screen flex flex-col relative">
@@ -241,7 +241,89 @@
       </defs>
     </svg>
   </div>
+  <script>
+    // Password validation script
+    document.addEventListener('DOMContentLoaded', function() {
+      const passwordInput = document.getElementById('password');
+      const form = passwordInput.closest('form');
 
+      // Password validation function
+      function validatePassword(password) {
+        // Define validation criteria
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumbers = /[0-9]/.test(password);
+        const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password);
+
+        // Validation results
+        const errors = [];
+
+        if (password.length < minLength) {
+          errors.push(`Password must be at least ${minLength} characters long`);
+        }
+        if (!hasUpperCase) {
+          errors.push('Password must contain at least one uppercase letter');
+        }
+        if (!hasLowerCase) {
+          errors.push('Password must contain at least one lowercase letter');
+        }
+        if (!hasNumbers) {
+          errors.push('Password must contain at least one number');
+        }
+        if (!hasSpecialChar) {
+          errors.push('Password must contain at least one special character');
+        }
+
+        return {
+          isValid: errors.length === 0,
+          errors: errors
+        };
+      }
+
+      // Create feedback element for validation messages
+      const feedbackElement = document.createElement('div');
+      feedbackElement.classList.add('mt-2', 'text-sm');
+      passwordInput.after(feedbackElement);
+
+      // Real-time validation
+      passwordInput.addEventListener('input', function() {
+        const result = validatePassword(this.value);
+
+        if (this.value === '') {
+          // Clear feedback if field is empty
+          feedbackElement.textContent = '';
+          feedbackElement.className = 'mt-2 text-sm';
+          return;
+        }
+
+        if (result.isValid) {
+          feedbackElement.textContent = 'Password meets all requirements';
+          feedbackElement.className = 'mt-2 text-sm text-green-500';
+        } else {
+          feedbackElement.innerHTML = result.errors.map(error =>
+            `<p class="text-red-500">${error}</p>`
+          ).join('');
+          feedbackElement.className = 'mt-2 text-sm';
+        }
+      });
+
+      // Form submission validation
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          const result = validatePassword(passwordInput.value);
+
+          if (!result.isValid) {
+            e.preventDefault();
+            feedbackElement.innerHTML = result.errors.map(error =>
+              `<p class="text-red-500">${error}</p>`
+            ).join('');
+            passwordInput.focus();
+          }
+        });
+      }
+    });
+  </script>
 
 </body>
 

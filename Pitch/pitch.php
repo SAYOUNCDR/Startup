@@ -71,123 +71,7 @@
                 </div>
             </div>
 
-            <!-- Search Bar -->
-            <div class="relative mb-8">
-                <input type="text" placeholder="Search startups by name, industry, or location..." class="w-full px-4 py-3 pl-12 rounded-lg bg-gradient-to-tl from-gray-900 to-black border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                <svg class="w-6 h-6 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-            </div>
 
-            <!-- Filter Tabs -->
-            <div class="flex overflow-x-auto pb-2 mb-6 scrollbar-hide">
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-medium whitespace-nowrap">All Startups</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Tech & AI</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Healthcare</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Fintech</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">E-commerce</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Education</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Sustainability</button>
-                <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">SaaS</button>
-            </div>
-
-            <!-- Filter and Sort Controls -->
-            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
-                <div class="flex flex-wrap gap-3">
-                    <div class="flex items-center gap-2">
-                        <span class="text-gray-400">Stage:</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button class="px-3 py-1 rounded-full bg-purple-900 bg-opacity-40 border border-purple-500 text-purple-300 hover:bg-opacity-60 transition text-sm">All Stages</button>
-                            <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Seed</button>
-                            <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Series A</button>
-                            <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Growth</button>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2">
-                        <span class="text-gray-400">Min Investment:</span>
-                        <select class="bg-gray-800 border border-gray-700 rounded-md px-3 py-1 text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            <option>Any</option>
-                            <option>$100+</option>
-                            <option>$1,000+</option>
-                            <option>$10,000+</option>
-                            <option>$50,000+</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <div class="flex items-center">
-                        <span class="mr-2 text-gray-400">View:</span>
-                        <div class="flex">
-                            <button class="p-2 rounded-l-md bg-purple-900 bg-opacity-40 border border-purple-500 text-purple-300 hover:bg-opacity-60">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            <button class="p-2 rounded-r-md bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center">
-                        <label class="mr-2 text-gray-400">Sort by:</label>
-                        <select class="bg-gray-800 border border-gray-700 rounded-md px-3 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            <option>Trending</option>
-                            <option>Newest</option>
-                            <option>Most Funded</option>
-                            <option>Ending Soon</option>
-                            <option>Highest Potential</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add Pitch CTA -->
-            <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl mb-12 shadow-lg border border-gray-700">
-                <div class="flex flex-col md:flex-row items-center justify-between">
-                    <div class="flex items-start gap-4">
-                        <div class="hidden md:block">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#E94560] to-purple-600 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-bold mb-2 text-cyan-300">Have a startup idea?</h2>
-                            <p class="text-gray-300 mb-2">Share your vision and connect with investors and collaborators who believe in your idea.</p>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <div class="flex items-center text-xs text-gray-300">
-                                    <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Free to submit</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-300">
-                                    <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>2,800+ active investors</span>
-                                </div>
-                                <div class="flex items-center text-xs text-gray-300">
-                                    <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Review within 48 hours</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-6 md:mt-0 flex flex-col gap-2">
-                        <button class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-bold hover:opacity-90 transition shadow-lg shadow-purple-500/20">Submit Your Pitch</button>
-                        <a href="#" class="text-center text-xs text-cyan-400 hover:underline">Learn about our process</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -295,6 +179,136 @@
             </div>
         </div>
     </section>
+
+
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Add Pitch CTA -->
+        <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl mb-12 shadow-lg border border-gray-700">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-start gap-4">
+                    <div class="hidden md:block">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#E94560] to-purple-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Have a startup idea?</h2>
+                        <p class="text-gray-300 mb-2">Share your vision and connect with investors and collaborators who believe in your idea.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <div class="flex items-center text-xs text-gray-300">
+                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Free to submit</span>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-300">
+                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>2,800+ active investors</span>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-300">
+                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Review within 48 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex flex-col gap-2">
+                    <button class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-bold hover:opacity-90 transition shadow-lg shadow-purple-500/20">Submit Your Pitch</button>
+                    <a href="#" class="text-center text-xs text-cyan-400 hover:underline">Learn about our process</a>
+                </div>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="relative mb-8">
+            <input type="text" placeholder="Search startups by name, industry, or location..." class="w-full px-4 py-3 pl-12 rounded-lg bg-gradient-to-tl from-gray-900 to-black border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <svg class="w-6 h-6 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex overflow-x-auto pb-2 mb-6 scrollbar-hide">
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-medium whitespace-nowrap">All Startups</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Tech & AI</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Healthcare</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Fintech</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">E-commerce</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Education</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">Sustainability</button>
+            <button class="px-5 py-2 mr-2 rounded-lg bg-gradient-to-br from-gray-900 to-black border border-gray-800 cursor-pointer text-gray-300 font-medium whitespace-nowrap hover:bg-gray-700">SaaS</button>
+        </div>
+
+        <!-- Filter and Sort Controls -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+            <div class="flex flex-wrap gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-400">Stage:</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="px-3 py-1 rounded-full bg-purple-900 bg-opacity-40 border border-purple-500 text-purple-300 hover:bg-opacity-60 transition text-sm">All Stages</button>
+                        <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Seed</button>
+                        <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Series A</button>
+                        <button class="px-3 py-1 rounded-full bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60 transition text-sm">Growth</button>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-400">Min Investment:</span>
+                    <select class="bg-gray-800 border border-gray-700 rounded-md px-3 py-1 text-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <option>Any</option>
+                        <option>$100+</option>
+                        <option>$1,000+</option>
+                        <option>$10,000+</option>
+                        <option>$50,000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="flex items-center">
+                    <span class="mr-2 text-gray-400">View:</span>
+                    <div class="flex">
+                        <button class="p-2 rounded-l-md bg-purple-900 bg-opacity-40 border border-purple-500 text-purple-300 hover:bg-opacity-60">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="p-2 rounded-r-md bg-gray-800 bg-opacity-40 border border-gray-700 text-gray-300 hover:bg-opacity-60">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <label class="mr-2 text-gray-400">Sort by:</label>
+                    <select class="bg-gray-800 border border-gray-700 rounded-md px-3 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <option>Trending</option>
+                        <option>Newest</option>
+                        <option>Most Funded</option>
+                        <option>Ending Soon</option>
+                        <option>Highest Potential</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
 
     <!-- Pitch Listings -->
     <section class="px-6 md:px-12">

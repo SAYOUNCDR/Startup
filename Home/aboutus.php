@@ -258,28 +258,28 @@
 
                 <img src="../Images/nav-img-2.jpg" alt="" class="h-30 w-50 mb-2 rounded-lg">
 
-                <h3 class="text-center font-semibold">Alex Morgan</h3>
+                <h3 class="text-center font-semibold">Sayoun PArui</h3>
                 <p class="text-center text-gray-400 text-sm">CEO & Co-Founder</p>
             </div>
             <div class="bg-gradient-to-br from-gray-900 to-black bg-opacity-40 flex flex-col justify-center items-center  p-6 rounded-lg border border-gray-800 hover:border-gray-600 cursor-pointer transition-all duration-800">
 
                 <img src="../Images/nav-img-2.jpg" alt="" class="h-30 w-50 mb-2 rounded-lg">
 
-                <h3 class="text-center font-semibold">Jordan Lee</h3>
+                <h3 class="text-center font-semibold">Vasudev Siddh</h3>
                 <p class="text-center text-gray-400 text-sm">CTO & Co-Founder</p>
             </div>
             <div class="bg-gradient-to-bl from-gray-900 to-black bg-opacity-40 flex flex-col justify-center items-center  p-6 rounded-lg border border-gray-800 hover:border-gray-600 cursor-pointer transition-all duration-800">
 
                 <img src="../Images/nav-img-2.jpg" alt="" class="h-30 w-50 mb-2 rounded-lg">
 
-                <h3 class="text-center font-semibold">Taylor Chen</h3>
+                <h3 class="text-center font-semibold">Anshuman Pal</h3>
                 <p class="text-center text-gray-400 text-sm">Head of Partnerships</p>
             </div>
             <div class="bg-gradient-to-tr from-gray-900 to-black bg-opacity-40 flex flex-col justify-center items-center  p-6 rounded-lg border border-gray-800 hover:border-gray-600 cursor-pointer transition-all duration-800">
 
                 <img src="../Images/nav-img-2.jpg" alt="" class="h-30 w-50 mb-2 rounded-lg">
 
-                <h3 class="text-center font-semibold">Casey Rivera</h3>
+                <h3 class="text-center font-semibold">Priyanshu</h3>
                 <p class="text-center text-gray-400 text-sm">Head of Community</p>
             </div>
         </div>
