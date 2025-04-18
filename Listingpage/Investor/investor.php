@@ -1,6 +1,6 @@
 <?php
 include_once '../../config/db.php';
-$sql = "SELECT * FROM founders";
+$sql = "SELECT * FROM investors";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Founders Directory</title>
+    <title>Investors Directory</title>
     <link rel="stylesheet" href="../../output.css">
 </head>
 
@@ -314,7 +314,7 @@ $result = mysqli_query($conn, $sql);
                                 </li>
                                 <li id="investor-img">
                                     <h3 class="text-sm font-medium text-white">Investors</h3>
-                                    <a href="../Investor/investor.php">
+                                    <a href="#">
                                         <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
                                             investors to fund startups with
                                             seamless and strategic connections
@@ -389,43 +389,44 @@ $result = mysqli_query($conn, $sql);
 
     <!-- Body -->
     <div class="container mx-auto px-4 py-8 mb-70">
-
-        <header class="py-16 px-8 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg mb-20">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between mr-5">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h1 class="text-5xl font-bold text-white mb-6">Connect with Visionary Founders</h1>
-                    <p class="text-xl text-gray-200 mb-8">Discover the next generation of innovators building tomorrow's
-                        groundbreaking startups. Network, collaborate, and grow together.</p>
+        <header class="py-20 px-10 bg-gradient-to-br from-gray-950 via-slate-900 to-zinc-900 rounded-lg mb-20 shadow-xl border border-gray-800">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="px-4 py-1 bg-slate-800 text-cyan-400 rounded-full text-sm font-medium mb-4 inline-block">Top Venture Capital Network</span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">Connect with Elite Startup Investors</h1>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">Access capital, mentorship and networks from visionary investors building tomorrow's unicorns. Your journey starts here.</p>
 
                     <div class="flex flex-wrap gap-4">
-                        <a href="../../SignUps/startup/index.php"
-                            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors">
-                            Register as Founder</a>
+                        <a href="../../SignUps/investor/index.php"
+                            class="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl">
+                            Register as Investor
+                        </a>
                         <a href="#listing"
-                            class="px-6 py-3 border border-white text-white hover:bg-white/10 font-medium rounded-md transition-colors">Explore
-                            Startups</a>
+                            class="px-8 py-4 bg-gray-900 bg-opacity-80 border border-gray-700 text-gray-200 hover:bg-gray-800 font-semibold rounded-lg transition-all hover:shadow-md">
+                            Explore Investors
+                        </a>
                     </div>
                 </div>
 
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
-                        <h2 class="text-4xl font-bold text-white">2,400+</h2>
-                        <p class="text-gray-300">Registered Founders</p>
+                <div class="md:w-1/2 grid grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-gray-900 to-slate-900 p-6 rounded-xl backdrop-blur border border-gray-800 shadow-lg transform hover:scale-105 transition-transform">
+                        <h2 class="text-4xl font-bold text-white">500+</h2>
+                        <p class="text-gray-400">Registered Investors</p>
                     </div>
 
-                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
-                        <h2 class="text-4xl font-bold text-white">$840M</h2>
-                        <p class="text-gray-300">Total Funding Raised</p>
+                    <div class="bg-gradient-to-br from-blue-900 to-slate-900 p-6 rounded-xl backdrop-blur border border-blue-800 shadow-lg transform hover:scale-105 transition-transform">
+                        <h2 class="text-4xl font-bold text-white">$540M</h2>
+                        <p class="text-blue-300">Total Funded</p>
                     </div>
 
-                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
+                    <div class="bg-gradient-to-br from-gray-900 to-zinc-900 p-6 rounded-xl backdrop-blur border border-gray-800 shadow-lg transform hover:scale-105 transition-transform">
                         <h2 class="text-4xl font-bold text-white">56</h2>
-                        <p class="text-gray-300">Countries Represented</p>
+                        <p class="text-gray-400">Countries Represented</p>
                     </div>
 
-                    <div class="bg-gradient-to-r from-purple-900 to-black p-6 rounded-lg backdrop-blur border border-gray-500">
-                        <h2 class="text-4xl font-bold text-white">320+</h2>
-                        <p class="text-gray-300">Successful Exits</p>
+                    <div class="bg-gradient-to-br from-cyan-900 to-slate-900 p-6 rounded-xl backdrop-blur border border-cyan-900 shadow-lg transform hover:scale-105 transition-transform">
+                        <h2 class="text-4xl font-bold text-white">90+</h2>
+                        <p class="text-cyan-300">Successful Fundings</p>
                     </div>
                 </div>
             </div>
@@ -436,7 +437,7 @@ $result = mysqli_query($conn, $sql);
             <div class="md:w-1/4">
                 <div class="bg-black rounded-lg sticky top-8">
                     <div class="flex justify-between items-center p-4">
-                        <h2 class="text-xl font-bold text-white">Filter Founders</h2>
+                        <h2 class="text-xl font-bold text-white">Filter Investors</h2>
                     </div>
 
                     <!-- Search Bar -->
@@ -455,19 +456,16 @@ $result = mysqli_query($conn, $sql);
 
                     <!-- Filter Categories -->
                     <div class="border-t border-gray-800">
+                        <!-- Industries of Interest -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer focus:outline-none text-white border-b border-gray-800 transition-colors">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer focus:outline-none text-white border-b border-gray-800 transition-colors">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">🛒 Industry</span>
+                                    <span class="font-medium">🌐 Industries of Interest</span>
                                 </div>
                             </button>
-
                             <div class="filter-content hidden px-4 py-3 bg-black">
                                 <div class="space-y-2">
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
@@ -479,238 +477,241 @@ $result = mysqli_query($conn, $sql);
                                         <span class="ml-2 text-gray-300">Healthcare</span>
                                     </label>
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
-                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
                                         <span class="ml-2 text-gray-300">Education</span>
                                     </label>
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
-                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
                                         <span class="ml-2 text-gray-300">FinTech</span>
                                     </label>
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
-                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
                                         <span class="ml-2 text-gray-300">E-commerce</span>
                                     </label>
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
-                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
                                         <span class="ml-2 text-gray-300">Sustainability</span>
                                     </label>
                                     <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
-                                        <input type="checkbox" class="w-5 h-5 rounded  accent-black border-gray-600">
-                                        <span class="ml-2 text-gray-300">Media &</span>
+                                        <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                        <span class="ml-2 text-gray-300">Media & Entertainment</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-
-                        <!-- Startup Stage -->
+                        <!-- Investment Stage -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">💰 Startup Stage</span>
+                                    <span class="font-medium">💰 Investment Stage</span>
                                 </div>
                             </button>
                             <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Idea Stage</span>
+                                    <span class="ml-2 text-gray-300">Seed</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">MVP</span>
+                                    <span class="ml-2 text-gray-300">Series A</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Beta Testing</span>
+                                    <span class="ml-2 text-gray-300">Series B</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Launched</span>
+                                    <span class="ml-2 text-gray-300">Growth</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Scaling</span>
+                                    <span class="ml-2 text-gray-300">Late-Stage</span>
                                 </label>
                             </div>
                         </div>
 
-                        <!-- Location -->
+                        <!-- Geographic Focus -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">📍 Location</span>
+                                    <span class="font-medium">🌍 Geographic Focus</span>
                                 </div>
                             </button>
                             <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Kolkata</span>
+                                    <span class="ml-2 text-gray-300">North America</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Bangalore</span>
+                                    <span class="ml-2 text-gray-300">Europe</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">Country</span>
+                                    <span class="ml-2 text-gray-300">Asia</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Africa</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Global</span>
                                 </label>
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
                                     <span class="ml-2 text-gray-300">Remote</span>
                                 </label>
+                            </div>
+                        </div>
+
+                        <!-- Investment Type -->
+                        <div class="filter-category">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <span class="font-medium">🎯 Investment Type</span>
+                                </div>
+                            </button>
+                            <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
                                 <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
                                     <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
-                                    <span class="ml-2 text-gray-300">On-site</span>
+                                    <span class="ml-2 text-gray-300">Equity</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Debt</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Convertible Notes</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Grants</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Revenue Sharing</span>
                                 </label>
                             </div>
                         </div>
 
-                        <!-- Looking For -->
+                        <!-- Check Size -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">🎯 Looking For</span>
+                                    <span class="font-medium">💰 Check Size</span>
                                 </div>
                             </button>
                             <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Co-founders</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Technical
-                                        Partners</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Marketing
-                                        Experts</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Investors</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Mentors</span></label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">$10k - $50k</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">$50k - $100k</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">$100k - $500k</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">$500k+</span>
+                                </label>
                             </div>
                         </div>
 
-                        <!-- Skills They Have -->
+                        <!-- Years Investing -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">🧠 Skills They Have</span>
+                                    <span class="font-medium">💼 Years Investing</span>
                                 </div>
                             </button>
                             <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Business
-                                        Strategy</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Product
-                                        Design</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Coding/Tech</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Sales/Marketing</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span
-                                        class="ml-2 text-gray-300">Finance</span></label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">0-2 years</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">3-5 years</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">5-10 years</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">10+ years</span>
+                                </label>
                             </div>
                         </div>
 
-                        <!-- Previous Experience -->
+                        <!-- Preferred Involvement -->
                         <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
+                            <button class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
                                 <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span class="font-medium">💼 Previous Experience</span>
+                                    <span class="font-medium">🤝 Preferred Involvement</span>
                                 </div>
                             </button>
                             <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">0-1
-                                        years</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">2-3
-                                        years</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">5+
-                                        years</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Serial
-                                        Entrepreneur</span></label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Active Involvement</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Passive Investor</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Board Seat</span>
+                                </label>
+                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 rounded accent-black border-gray-600">
+                                    <span class="ml-2 text-gray-300">Advisory Role</span>
+                                </label>
                             </div>
                         </div>
-
-                        <!-- Team Size -->
-                        <div class="filter-category">
-                            <button
-                                class="w-full flex items-center justify-between text-left py-4 px-4 cursor-pointer text-white border-b border-gray-800">
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-3 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                    <span class="font-medium">👥 Team Size</span>
-                                </div>
-                            </button>
-                            <div class="filter-content hidden px-4 py-3 bg-black space-y-2">
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">Solo
-                                        founder</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">2–5
-                                        members</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">5–10
-                                        members</span></label>
-                                <label class="flex items-center p-2 rounded bg-[#0A0A0A] cursor-pointer"><input type="checkbox"
-                                        class="w-5 h-5 rounded accent-black border-gray-600"><span class="ml-2 text-gray-300">10+
-                                        members</span></label>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
 
 
 
-            <!-- Founders List -->
+            <!-- Investors List -->
             <div class="md:w-3/4" id="listing">
                 <div class="mb-6 flex justify-between items-center">
                     <div>
-                        <h2 class="text-xl font-bold text-white">Founders</h2>
+                        <h2 class="text-xl font-bold text-white">Investors</h2>
                     </div>
                 </div>
 
-                <!-- Grid of Founders -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Founder Card 1 -->
+                <!-- Grid of Investors -->
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Investor Card 1 -->
 
                     <?php
 
@@ -718,54 +719,139 @@ $result = mysqli_query($conn, $sql);
                         while ($row = $result->fetch_assoc()) {
                             $full_name = $row['full_name'];
                             $email = $row['email'];
-                            $startup_name = $row['startup_name'];
-                            $category = $row['category'];
-                            $founding_date = $row['founding_date'];
-                            $company_size = $row['company_size'];
-                            $description = $row['description'];
-                            $funding_stage = $row['funding_stage'];
-                            $funding_raised = $row['funding_raised'];
-                            $currently_seeking = $row['currently_seeking'];
+                            $organization = $row['organization'];
+                            $title = $row['title'];
+                            $investor_type = $row['investor_type'];
+                            $linkedin = $row['linkedin'];
+                            $investment_stage = $row['investment_stage'];
+                            $investment_range = $row['investment_range'];
+                            $sectors = $row['sectors'];
+                            $thesis = $row['thesis'];
 
-                            $cover_img = "../../Images/nav-img-2.jpg";
+
+                            $cover_img = "../../Images/events-01.jpg";
                             $avatar_img = "../../Images/nav-img-1.png";
-
                             echo '
-                                <div class="bg-gradient-to-br from-gray-900 to-black rounded-lg overflow-hidden border border-gray-700 hover:border-gray-500 transition duration-300">
-                                    <div class="relative">
-                                        <img src="' . $cover_img . '" alt="Founder" class="w-full h-40 object-cover">
-                                        <div
-                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                                            <div class="flex items-center">
-                                                <img src="' . $avatar_img . '" alt="Founder Avatar"
-                                                    class="w-12 h-12 rounded-full border-2 border-white">
-                                                <div class="ml-3">
-                                                    <h3 class="text-white font-medium">' . $full_name . '</h3>
-                                                    <p class="text-gray-300 text-sm">CEO & Co-founder</p>
-                                                </div>
-                                            </div>
+                                <div class="bg-gradient-to-br from-gray-950 via-slate-900 to-zinc-900 rounded-lg overflow-hidden border border-gray-800 hover:border-gray-500 transition-all duration-300 shadow-lg mb-6 w-full hover:shadow-cyan-900/20 investor-card">
+                                <div class="flex flex-col md:flex-row">
+                                    <!-- Left Section with Image and Overlay -->
+                                    <div class="relative md:w-1/3">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/10 mix-blend-overlay"></div>
+                                    <img src="' . $cover_img . '" alt="Investor" class="w-full h-48 md:h-full object-cover">
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                                        <div class="flex items-center">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 animate-pulse opacity-70 blur-sm"></div>
+                                            <img src="' . $avatar_img . '" alt="Investor Avatar" class="relative w-16 h-16 rounded-full border-2 border-white shadow-lg">
+                                        </div>
+                                        <div class="ml-3">
+                                            <h3 class="text-white font-bold text-xl investor-name">' . $full_name . '</h3>
+                                            <p class="text-gray-300 text-sm flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                            ' . $title . '
+                                            </p>
+                                        </div>
                                         </div>
                                     </div>
-                                    <div class="p-4">
-                                        <div class="flex items-center mb-3">
-                                            <img src="' . $avatar_img . '" alt="Company Logo" class="w-6 h-6 rounded">
-                                            <span class="ml-2 font-medium text-white">' . $startup_name . '</span>
+                                    </div>
+                                    
+                                    <!-- Right Section with Content -->
+                                    <div class="p-6 md:w-2/3 relative">
+                                    <div class="absolute top-0 right-0 h-40 w-40 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                        </svg>
+                                        <span class="font-bold text-white text-lg investor-organization">' . $organization . '</span>
                                         </div>
-                                        <p class="text-gray-400 text-sm mb-4">' . substr($description, 0, 120) . '...</p>
-                                        <div class="flex flex-wrap gap-2 mb-4">
-                                            <span
-                                                class="bg-purple-900 bg-opacity-50 text-purple-300 text-xs px-2 py-1 rounded">' . $category . '</span>
-                                            <span class="bg-blue-900 bg-opacity-50 text-blue-300 text-xs px-2 py-1 rounded">' . $category . '</span>
-                                            <span class="bg-green-900 bg-opacity-50 text-green-300 text-xs px-2 py-1 rounded">' . $funding_stage . '</span>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <span class="text-gray-400 text-sm">📍 Hydrabad, India</span>
-                                            <button class="text-transparent bg-clip-text bg-gradient-to-r from-[#E94560] to-purple-600 hover:text-purple-400 text-sm font-medium cursor-pointer">
-                                                View Profile
-                                            </button>
+                                        <div class="flex ml-auto space-x-2">
+                                        <span class="bg-cyan-900 bg-opacity-30 text-cyan-400 text-xs px-3 py-1 rounded-full border border-cyan-800/50 investor-type">' . $investor_type . '</span>
+                                        <span class="bg-blue-900 bg-opacity-30 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-800/50">Top 10%</span>
                                         </div>
                                     </div>
-                                </div> ';
+                                    
+                                    <div class="bg-gray-900/50 p-4 rounded-lg border border-gray-800 mb-5">
+                                        <h4 class="text-gray-300 text-sm font-medium mb-2 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        Investment Thesis
+                                        </h4>
+                                        <p class="text-gray-300 text-base investor-thesis">' . $thesis . '</p>
+                                    </div>
+                                    
+                                    <!-- Investment Focus -->
+                                    <div class="mb-5">
+                                        <h4 class="text-gray-300 text-sm uppercase mb-2 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                                        </svg>
+                                        Sectors of Interest
+                                        </h4>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                        ' . preg_replace("/,\s*/", "' . '</span>
+                                        <span class=\"bg-blue-900 bg-opacity-40 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-800/30 hover:bg-blue-800/50 transition-colors\">' . '", '<span class="bg-blue-900 bg-opacity-40 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-800/30 hover:bg-blue-800/50 transition-colors">' . $sectors . '</span>') . '
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Key Stats -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                                        <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                                        <div class="flex items-center mb-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyan-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <p class="text-gray-400 text-xs uppercase font-medium">Investment Range</p>
+                                        </div>
+                                        <p class="text-white font-semibold text-lg">' . $investment_range . '</p>
+                                        </div>
+                                        <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                                        <div class="flex items-center mb-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyan-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                            </svg>
+                                            <p class="text-gray-400 text-xs uppercase font-medium">Investment Stage</p>
+                                        </div>
+                                        <p class="text-white font-semibold text-lg investor-investment-stage">' . $investment_stage . '</p>
+                                        </div>
+                                        <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
+                                        <div class="flex items-center mb-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyan-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                            </svg>
+                                            <p class="text-gray-400 text-xs uppercase font-medium">Title</p>
+                                        </div>
+                                        <p class="text-white font-semibold text-lg investor-title">' . $title . '</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center mt-6 pt-4 border-t border-gray-800">
+                                        <a href="mailto:' . $email . '" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center group">
+                                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 group-hover:bg-cyan-900/50 rounded-full mr-2 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        Contact
+                                        </a>
+                                        <div class="flex space-x-3">
+                                        <a href="' . $linkedin . '" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white text-sm font-medium rounded-lg transition flex items-center border border-gray-700 hover:border-gray-600">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                            </svg>
+                                            LinkedIn
+                                        </a>
+                                        <button class="px-5 py-2 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white text-sm font-medium rounded-lg transition shadow-lg hover:shadow-cyan-900/50 border border-cyan-500/20">
+                                            View Profile
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>';
                         }
                     } else {
                         echo "<p class='text-white'>No founders found.</p>";
@@ -861,7 +947,7 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </footer>
-    <script src="./Founders.js"></script>
+    <script src="./investor.js"></script>
 </body>
 
 </html>

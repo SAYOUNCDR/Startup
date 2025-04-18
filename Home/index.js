@@ -1,4 +1,4 @@
-// <!-- JS for Modal Toggle [join now button nav bar ]--> 
+// <!-- JS for Modal Toggle [join now button nav bar ]-->
 function toggleModal() {
   const modal = document.getElementById("joinModal");
   modal.classList.toggle("hidden");
@@ -40,19 +40,13 @@ function eraseEffect() {
 }
 typeEffect(words[index]); // Start animation
 
-
 //Js for nav bar hover stroke colour change
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all flex containers that match your component structure
   const flexContainers = document.querySelectorAll("#main-div");
-
   flexContainers.forEach((container) => {
-    // Get the SVG div and SVG element within each container
-    // This uses class selectors instead of ID selectors
     const svgDiv = container.querySelector("#svg-div");
     const svg = container.querySelector("svg");
 
-    // Add mouseenter event listener to the container
     container.addEventListener("mouseenter", function () {
       if (svgDiv) {
         svgDiv.style.backgroundColor = "white";
@@ -64,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Add mouseleave event listener to the container
     container.addEventListener("mouseleave", function () {
       if (svgDiv) {
         svgDiv.style.backgroundColor = "black";
@@ -102,7 +95,6 @@ function toggleAccordion(id) {
   }
 }
 
-
 // JavaScript for Tab Functionality with Smooth Transitions {how it works}
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".user-tab-btn");
@@ -110,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tabButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      // Remove active classes from all buttons
       tabButtons.forEach((btn) => {
         btn.classList.remove(
           "active",
@@ -122,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("bg-transparent");
       });
 
-      // Add active classes to clicked button
       button.classList.add(
         "active",
         "bg-gradient-to-r",
@@ -158,6 +148,3 @@ document.addEventListener("DOMContentLoaded", function () {
     content.style.opacity = content.classList.contains("hidden") ? "0" : "1";
   });
 });
-
-
-

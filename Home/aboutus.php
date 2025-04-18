@@ -18,7 +18,7 @@
         <div class="absolute -top-30 -right-10 w-80 h-80 bg-[#E94560] rounded-full filter blur-3xl opacity-10"></div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-6">About <span class="bg-gradient-to-r from-[#E94560] to-purple-600 bg-clip-text text-transparent">ElevateX</span></h1>
+            <h1 class="text-5xl font-bold mb-6">About <span class="bg-gradient-to-r from-[#E94560] to-purple-600 bg-clip-text text-transparent"><a href="./main.php">ElevateX</a></span></h1>
             <p class="text-xl text-gray-300 mb-10">Connecting visionaries, building the future of entrepreneurship</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="./main.php#joinButton" class="bg-gradient-to-r from-[#E94560] to-purple-600 px-8 py-3 rounded-lg font-medium transition-colors">Join Our Ecosystem</a>

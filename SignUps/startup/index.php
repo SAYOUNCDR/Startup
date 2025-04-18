@@ -242,14 +242,11 @@
     </svg>
   </div>
   <script>
-    // Password validation script
     document.addEventListener('DOMContentLoaded', function() {
       const passwordInput = document.getElementById('password');
       const form = passwordInput.closest('form');
 
-      // Password validation function
       function validatePassword(password) {
-        // Define validation criteria
         const minLength = 8;
         const hasUpperCase = /[A-Z]/.test(password);
         const hasLowerCase = /[a-z]/.test(password);
@@ -281,17 +278,14 @@
         };
       }
 
-      // Create feedback element for validation messages
       const feedbackElement = document.createElement('div');
       feedbackElement.classList.add('mt-2', 'text-sm');
       passwordInput.after(feedbackElement);
 
-      // Real-time validation
       passwordInput.addEventListener('input', function() {
         const result = validatePassword(this.value);
 
         if (this.value === '') {
-          // Clear feedback if field is empty
           feedbackElement.textContent = '';
           feedbackElement.className = 'mt-2 text-sm';
           return;

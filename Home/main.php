@@ -161,7 +161,7 @@
     <nav class="bg-black px-6 py-4 m-3 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
-            <a href="/" class="flex items-center">
+            <a href="./main.php" class="flex items-center">
                 <!-- Logo -->
                 <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ml-2">ElevateX</span>
             </a>
@@ -173,7 +173,7 @@
             <!-- flex items-center px-3 py-2 text-gray-300 hover:text-white -->
             <div class="relative group">
                 <button class="flex items-center px-3 py-2 text-white cursor-pointer">
-                    Freelance Zone
+                    <a href="../WebDev/web.php">Freelance Zone</a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="ml-1 transition-transform duration-300 hover:rotate-180">
@@ -426,64 +426,57 @@
 
             <!-- Dropdown Menus -->
             <div class="relative group">
-                <!-- Dropdown menu freelance Zone -->
-                <div class="flex items-center space-x-4">
-                    <!-- Getting Started Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center px-3 py-2 text-white cursor-pointer">
-                            Community
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="ml-1 transition-transform duration-300 hover:rotate-180">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </button>
-                        <div
-                            class="absolute left-0 w-120 bg-black border border-gray-700 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible z-50">
-                            <div class="p-6 flex">
-                                <!-- Left large area (40%) -->
-                                <div class="w-2/5 pr-4 border border-gray-700 rounded-lg mr-5">
-                                    <!-- For image area is left mfs -->
-                                </div>
+                <button class="flex items-center px-3 py-2 text-white cursor-pointer">
+                    Community
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="ml-1 transform transition-transform duration-300 group-hover:rotate-180">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                </button>
+                <div
+                    class="absolute left-0 w-120 bg-black border border-gray-700 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible z-50">
+                    <div class="p-6 flex">
+                        <!-- Left large area (40%) -->
+                        <div class="w-2/5  border border-gray-700 rounded-lg mr-5">
+                            <!-- For image area is left mfs -->
+                            <img src="../Images/events-01.jpg" alt="" class="w-full h-full object-cover rounded-lg mb-4" id="nav-img">
+                        </div>
 
-                                <!-- Right side with three lists (60%) -->
-                                <div class="w-3/5">
-                                    <ul class="space-y-6">
-                                        <li>
-                                            <h3 class="text-sm font-medium text-white">Founders</h3>
-                                            <a href="../Listingpage/Founder/Founders.php">
-                                                <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Helping
-                                                    founders connect, collaborate, and
-                                                    scale their visionary startups.</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <h3 class="text-sm font-medium text-white">Investors</h3>
-                                            <a href="#">
-                                                <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
-                                                    investors to fund startups with
-                                                    seamless and strategic connections
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <h3 class="text-sm font-medium text-white">Contibuters</h3>
-                                            <a href="#">
-                                                <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Join as a
-                                                    contributor to support startups
-                                                    with skills, ideas, and expertise.
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <!-- Right side with three lists (60%) -->
+                        <div class="w-3/5">
+                            <ul class="space-y-6">
+                                <li id="founder-img">
+                                    <h3 class="text-sm font-medium text-white">Founders</h3>
+                                    <a href="../Listingpage/Founder/Founders.php">
+                                        <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Helping
+                                            founders connect, collaborate, and
+                                            scale their visionary startups.</p>
+                                    </a>
+                                </li>
+                                <li id="investor-img">
+                                    <h3 class="text-sm font-medium text-white">Investors</h3>
+                                    <a href="../Listingpage/Investor/investor.php">
+                                        <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
+                                            investors to fund startups with
+                                            seamless and strategic connections
+                                        </p>
+                                    </a>
+                                </li>
+                                <li id="contributor-img">
+                                    <h3 class="text-sm font-medium text-white">Contibuters</h3>
+                                    <a href="#">
+                                        <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Join as a
+                                            contributor to support startups
+                                            with skills, ideas, and expertise.
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <!-- Auth Buttons -->
@@ -581,18 +574,6 @@
             </div>
 
             <div class="container mx-auto px-4 relative z-10">
-                <!-- Section Header -->
-                <!-- <div class="text-center mb-20">
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#E94560] to-purple-500 font-bold text-lg mb-2 inline-block">SEAMLESS
-                        PROCESS</span>
-                    <h2 class="text-5xl font-bold mb-6">How It Works</h2>
-                    <div class="w-32 h-1 bg-gradient-to-r from-[#E94560] to-purple-500 mx-auto mb-8"></div>
-                    <p class="text-gray-300 max-w-3xl mx-auto text-lg">Our platform connects the startup ecosystem through
-                        an
-                        intuitive journey tailored to each participant's unique needs.</p>
-                </div> -->
-
                 <!-- User Type Navigation - Elegant Pill Design -->
                 <div class="flex flex-wrap justify-center mb-20">
                     <div class="bg-gray-900/40 backdrop-blur-lg p-2 rounded-lg flex flex-wrap justify-center shadow-2xl shadow-[#E94560]/10 border border-gray-800">
@@ -1403,7 +1384,7 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1"><a href="../Listingpage/Startup/startup_info.php">Connect</a></button>
                             <button
                                 class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
@@ -1440,7 +1421,7 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1"><a href="../Listingpage/Startup/startup_info.php">Connect</a></button>
                             <button
                                 class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
@@ -1477,7 +1458,7 @@
                         </div>
                         <div class="flex space-x-2 pt-4 border-t border-gray-700">
                             <button
-                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1">Connect</button>
+                                class="cursor-pointer bg-gradient-to-r from-[#E94560] to-purple-600 hover:bg-opacity-90 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-300 flex-1"><a href="../Listingpage/Startup/startup_info.php">Connect</a></button>
                             <button
                                 class="cursor-pointer bg-transparent border border-gray-600 hover:border-gray-500 text-gray-300 text-sm font-medium py-2 px-4 rounded-md transition duration-300">Profile</button>
                         </div>
@@ -1764,9 +1745,9 @@
                         <h5 class="text-sm font-medium mb-3 text-white">Platform</h5>
                         <ul class="space-y-2 text-sm text-gray-400">
                             <li><a href="#" class="hover:text-white">Discover</a></li>
-                            <li><a href="#" class="hover:text-white">Startups</a></li>
+                            <li><a href="../Listingpage/Startup/startups.php" class="hover:text-white">Startups</a></li>
                             <li><a href="#" class="hover:text-white">Investors</a></li>
-                            <li><a href="#" class="hover:text-white">Talent</a></li>
+                            <!-- <li><a href="#" class="hover:text-white">Talent</a></li> -->
                         </ul>
                     </div>
                     <div>
@@ -1774,17 +1755,17 @@
                         <ul class="space-y-2 text-sm text-gray-400">
                             <li><a href="#" class="hover:text-white">Blog</a></li>
                             <li><a href="#" class="hover:text-white">Guides</a></li>
-                            <li><a href="#" class="hover:text-white">Events</a></li>
-                            <li><a href="#" class="hover:text-white">Podcast</a></li>
+                            <li><a href="../Eventpage/events.php" class="hover:text-white">Events</a></li>
+                            <!-- <li><a href="#" class="hover:text-white">Podcast</a></li> -->
                         </ul>
                     </div>
                     <div>
                         <h5 class="text-sm font-medium mb-3 text-white">Company</h5>
                         <ul class="space-y-2 text-sm text-gray-400">
-                            <li><a href="#" class="hover:text-white">About</a></li>
-                            <li><a href="#" class="hover:text-white">Careers</a></li>
-                            <li><a href="#" class="hover:text-white">Contact</a></li>
-                            <li><a href="#" class="hover:text-white">Press</a></li>
+                            <li><a href="./aboutus.php" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Freelance Zone</a></li>
+                            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                            <!-- <li><a href="#" class="hover:text-white">Press</a></li> -->
                         </ul>
                     </div>
                     <div>

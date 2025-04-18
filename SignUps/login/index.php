@@ -136,7 +136,7 @@ if (isset($_POST['login'])) {
           <div class="mb-6">
             <div class="flex justify-between mb-2">
               <label for="password" class="font-medium">Password</label>
-              <a href="#" class="text-sm text-pink-400 hover:text-pink-300">Forgot password?</a>
+              <!-- <a href="#" class="text-sm text-pink-400 hover:text-pink-300">Forgot password?</a> -->
             </div>
             <input
               type="password"
