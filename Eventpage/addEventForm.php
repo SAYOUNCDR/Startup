@@ -16,7 +16,7 @@
                 <i class="fas fa-times text-xl"></i>
             </button>
 
-            <form id="eventSubmissionForm" class="space-y-6">
+            <form id="eventSubmissionForm" class="space-y-6" action="../config/addEvent.php" method="POST">
                 <div class="text-center mb-6">
                     <h2 class="text-2xl font-bold text-white">Submit Your Event</h2>
                     <p class="text-gray-400">Complete the form below to submit your event for review</p>
@@ -81,14 +81,14 @@
                         <input type="email" name="email" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     </div>
 
-                    <div class="md:col-span-2">
+                    <!-- <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-400 mb-2">Event Image</label>
                         <div class="border border-dashed border-gray-600 rounded-lg p-4 text-center">
                             <i class="fas fa-cloud-upload-alt text-gray-400 text-2xl mb-2"></i>
                             <p class="text-sm text-gray-400">Drag and drop an image or click to upload</p>
                             <input type="file" name="eventImage" class="opacity-0 absolute inset-0 cursor-pointer">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="flex items-center space-x-2 text-sm">
@@ -102,13 +102,13 @@
             </form>
 
             <!-- Success message (hidden by default) -->
-            <div id="submissionSuccess" class="text-center py-12 hidden">
+            <!-- <div id="submissionSuccess" class="text-center py-12 hidden">
                 <div class="h-16 w-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-check text-2xl text-white"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Event Submitted Successfully!</h3>
                 <p class="text-gray-400">Your event has been submitted for review. We'll notify you once it's approved.</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

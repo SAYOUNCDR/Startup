@@ -1,3 +1,9 @@
+<?php
+include_once '../config/db.php';
+$sql = "SELECT * FROM events";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -133,124 +139,45 @@
         <h2 class="text-2xl font-bold mb-6">Upcoming Events</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <!-- Event Card 1 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-01.jpg" alt="Startup Weekend" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-cyan-500 text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Hackathon</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> May 5-7, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> New York</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Startup Weekend NYC</h3>
-                    <p class="text-gray-400 text-sm mb-4">Launch a startup in 54 hours. Network, build, and pitch your idea to investors and industry experts.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">$99 - $149</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Event Card 2 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-02.jpg" alt="Venture Capital Summit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Conference</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> May 15, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> Virtual</span>
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $eventName = $row['eventName'];
+                    $eventType = $row['eventType'];
+                    $startDate = $row['startDate'];
+                    $endDate = $row['endDate'];
+                    $locationType = $row['locationType'];
+                    $location = $row['location'];
+                    $description = $row['description'];
+                    $price = $row['price'];
+                    $email = $row['email'];
+                    echo '
+                    <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="../Images/events-01.jpg" alt="Startup Weekend" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                            <div class="absolute top-0 right-0 bg-cyan-500 text-white px-3 py-1 text-sm rounded-bl-lg font-medium">'. $eventType .'</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
+                                <span><i class="far fa-calendar-alt mr-1"></i>'. $startDate .'</span>
+                                <span><i class="far fa-calendar-alt mr-1"></i>'. $endDate .'</span>
+                                <span><i class="fas fa-map-marker-alt mr-1"></i>' . $location . '</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">'. $eventName .'</h3>
+                            <p class="text-gray-400 text-sm mb-4">'. $description .'</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-cyan-400 font-medium">$'. $price .'</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Global VC Summit 2025</h3>
-                    <p class="text-gray-400 text-sm mb-4">Connect with top venture capitalists and learn about the latest investment trends in the startup ecosystem.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">Free - $199</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Card 3 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-03.jpg" alt="SaaS Founders Meetup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-[#E94560] text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Networking</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> May 22, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> San Francisco</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">SaaS Founders Meetup</h3>
-                    <p class="text-gray-400 text-sm mb-4">Network with other SaaS founders, share experiences, and learn growth strategies in this intimate gathering.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">$75</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Card 4 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-02.jpg" alt="AI Summit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-cyan-500 text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Workshop</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> June 3, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> London</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">AI for Startups Workshop</h3>
-                    <p class="text-gray-400 text-sm mb-4">Learn how to leverage AI technologies to improve your products and increase efficiency in your startup.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">$250</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Card 5 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-03.jpg" alt="Fintech Summit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Conference</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> June 10-11, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> Berlin</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Fintech Innovation Summit</h3>
-                    <p class="text-gray-400 text-sm mb-4">Explore the future of financial technology and connect with investors specializing in fintech startups.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">€350</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Card 6 -->
-            <div class="bg-gradient-to-tr from-gray-900 to-black rounded-xl overflow-hidden border border-gray-700/50 hover:border-gray-700 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../Images/events-01.jpg" alt="Pitch Competition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <div class="absolute top-0 right-0 bg-[#E94560] text-white px-3 py-1 text-sm rounded-bl-lg font-medium">Pitch Event</div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between text-sm text-gray-400 mb-3">
-                        <span><i class="far fa-calendar-alt mr-1"></i> June 20, 2025</span>
-                        <span><i class="fas fa-map-marker-alt mr-1"></i> Tokyo</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Startup Pitch Night Tokyo</h3>
-                    <p class="text-gray-400 text-sm mb-4">Present your startup to a panel of investors and compete for up to $100,000 in seed funding.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-cyan-400 font-medium">¥15,000</span>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Learn more →</a>
-                    </div>
-                </div>
-            </div>
+                    ';
+                }
+            } else {
+                echo "<script>alert('No events found');</script>";
+            }
+            ?>
         </div>
 
         <!-- Load More -->

@@ -58,6 +58,22 @@ $investors_sql = "CREATE TABLE IF NOT EXISTS investors (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 
+//Events Table
+
+$events_sql = "CREATE TABLE IF NOT EXISTS events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    eventName VARCHAR(100),
+    eventType VARCHAR(50),
+    startDate DATE,
+    endDate DATE,
+    locationType VARCHAR(50),
+    location VARCHAR(100),
+    description TEXT,
+    price VARCHAR(100),
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
 // Execute all queries --> for testing purposes
 if (mysqli_query($conn, $founders_sql)) {
     echo "Founders table created successfully.<br>";
@@ -75,5 +91,11 @@ if (mysqli_query($conn, $investors_sql)) {
     echo "Investors table created successfully.<br>";
 } else {
     echo "Error creating investors table: " . mysqli_error($conn) . "<br>";
+}
+
+if (mysqli_query($conn, $events_sql)) {
+    echo "Events table created successfully.<br>";
+} else {
+    echo "Error creating events table: " . mysqli_error($conn) . "<br>";
 }
 
