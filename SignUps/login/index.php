@@ -101,14 +101,6 @@ if (isset($_POST['login'])) {
   <!-- Header -->
   <header class="py-6 px-8 flex justify-between items-center relative z-10">
     <a href="../../Home/main.php" class="text-2xl font-bold text-white">ElevateX</a>
-    <a href="#" class="text-sm flex items-center">
-      <span class="mr-2">Don't have an account?</span>
-      <span class="text-pink-500 flex items-center">Join Now
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </span>
-    </a>
   </header>
 
   <!-- Main Content -->
@@ -145,23 +137,15 @@ if (isset($_POST['login'])) {
               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg "
               placeholder="••••••••"
               required />
-
-            <input type="checkbox" onclick="togglePassword()"> Show Password<br>
           </div>
 
           <div class="flex items-center mb-6">
-            <input
-              type="checkbox"
-              id="remember"
-              class="w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-pink-500" />
-            <label for="remember" class="ml-2 text-sm text-gray-300">
-              Keep me signed in
-            </label>
+            <input type="checkbox" onclick="togglePassword()" class="mt-5"> Show Password<br>
           </div>
 
           <button
             type="submit" name="login"
-            class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-lg flex items-center justify-center">
+            class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-lg cursor-pointer flex items-center justify-center">
             Log in
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

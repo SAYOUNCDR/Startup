@@ -16,10 +16,10 @@ $result = mysqli_query($conn, $sql);
 
 <body class="bg-black text-gray-200 min-h-screen">
     <!-- Nav bar -->
-    <nav class="bg-black px-6 py-4 m-3 flex items-center justify-between">
+    <nav class="px-6 py-4 m-3 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
-            <a href="../../Home/main.php" class="flex items-center">
+            <a href="./main.php" class="flex items-center">
                 <!-- Logo -->
                 <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ml-2">ElevateX</span>
             </a>
@@ -27,260 +27,16 @@ $result = mysqli_query($conn, $sql);
 
         <!-- Navigation Links -->
         <div class="hidden md:flex items-center space-x-8">
-            <!-- Dropdown menu freelance Zone -->
-            <!-- flex items-center px-3 py-2 text-gray-300 hover:text-white -->
-            <div class="relative group">
-                <button class="flex items-center px-3 py-2 text-white cursor-pointer">
-                    <a href="../WebDev/web.php">Freelance Zone</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="ml-1 transition-transform duration-300 hover:rotate-180">
-                        <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                </button>
-
-                <!-- Products Mega Dropdown -->
-                <div
-                    class="absolute top-full left-0 w-full md:w-[960px] bg-black border border-gray-700 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible z-50">
-                    <div class="grid grid-cols-3 gap-6 p-6">
-                        <!-- Tech & Software Section -->
-                        <div class="space-y-1 ">
-                            <h3 class="text-lg font-medium mb-4 text-white">Tech & Software</h3>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Web Development</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Modern frameworks and
-                                        tools</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path d="M12 2a8 8 0 100 16 8 8 0 000-16z" />
-                                        <path d="M9 9a3 3 0 014 0" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">AI & ML</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Powering breakthroughs
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                        <path d="M7 11V7a5 5 0 0110 0v4" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Cybersecurity</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Scale without
-                                        compromising</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path
-                                            d="M18 3a3 3 0 00-3 3v12a3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3H6a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3V6a3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3h12a3 3 0 003-3 3 3 0 00-3-3z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">SaaS</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Software as a Service
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                                        <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Blockchain</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Decentralized solutions
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FinTech Section -->
-                        <div class="space-y-1">
-                            <h3 class="text-lg font-medium mb-4 text-white">FinTech</h3>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <rect x="2" y="5" width="20" height="14" rx="2" />
-                                        <path d="M12 12h.01M17 12h.01M7 12h.01" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Digital Payments</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para"> Fast, scalable, and
-                                        reliable</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Crypto</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Cryptocurrency solutions
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path
-                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                        <polyline points="22,6 12,13 2,6" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Investment Platforms</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Helping teams ship 6x
-                                        faster</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">InsurTech</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Insurance technology</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Media & Entertainment Section -->
-                        <div class="space-y-1">
-                            <h3 class="text-lg font-medium mb-4 text-white">Media & Entertainment</h3>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <polygon points="23 7 16 12 23 17 23 7" />
-                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Streaming</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Servers, in serverless
-                                        form</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                        <line x1="8" y1="21" x2="16" y2="21" />
-                                        <line x1="12" y1="17" x2="12" y2="21" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Gaming</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Speed with Enterprise
-                                        scale</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 mb-4 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                                        <circle cx="12" cy="12" r="3" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">AR/VR</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Augmented & Virtual
-                                        Reality</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 cursor-pointer" id="main-div">
-                                <div class="p-2 bg-black rounded-md border border-gray-700" id="svg-div">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" id="para-svg">
-                                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                                        <polyline points="14 2 14 8 20 8" />
-                                        <line x1="16" y1="13" x2="8" y2="13" />
-                                        <line x1="16" y1="17" x2="8" y2="17" />
-                                        <polyline points="10 9 9 9 8 9" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white">Digital Content Creation</h4>
-                                    <p class="text-sm text-gray-300 hover:text-white" id="para">Trace every step</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- exprtimental area -->
 
 
-            <a href="../../Home/aboutus.php" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
-            <a href="../Startup/startups.php"
+            <a href="./aboutus.php" class="text-white hover:text-gray-300 transition-colors z-10">About Us</a>
+            <a href="../Listingpage/Startup/startups.php"
                 class="text-white hover:text-gray-300 transition-colors">Startups
             </a>
 
-            <a href="../../Pitch/pitch.php" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
-            <a href="../../Eventpage/events.php" class="text-white hover:text-gray-300 transition-colors">Events</a>
+            <a href="../Pitch/pitch.php" class="text-white hover:text-gray-300 transition-colors">Pitch</a>
+            <a href="../Eventpage/events.php" class="text-white hover:text-gray-300 transition-colors">Events</a>
 
             <!-- Dropdown Menus -->
             <div class="relative group">
@@ -306,7 +62,7 @@ $result = mysqli_query($conn, $sql);
                             <ul class="space-y-6">
                                 <li id="founder-img">
                                     <h3 class="text-sm font-medium text-white">Founders</h3>
-                                    <a href="../../Listingpage/Founder/Founders.php">
+                                    <a href="../Listingpage/Founder/Founders.php">
                                         <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Helping
                                             founders connect, collaborate, and
                                             scale their visionary startups.</p>
@@ -314,7 +70,7 @@ $result = mysqli_query($conn, $sql);
                                 </li>
                                 <li id="investor-img">
                                     <h3 class="text-sm font-medium text-white">Investors</h3>
-                                    <a href="../Investor/investor.php">
+                                    <a href="../Listingpage/Investor/investor.php">
                                         <p class="text-xs text-gray-400 hover:text-white cursor-pointer">Empowering
                                             investors to fund startups with
                                             seamless and strategic connections

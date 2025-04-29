@@ -9,71 +9,89 @@
 </head>
 
 <body class="bg-black min-h-screen text-white font-sans py-12">
-    <!-- Header Section -->
-    <section class="px-6 md:px-12 mb-12">
-        <div class="max-w-6xl mx-auto">
-            <!-- Hero Banner -->
-            <div class="relative mb-10 rounded-2xl overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black opacity-70 z-10 border border-gray-800"></div>
-                <img src="../Images/host-event.jpg" alt="Startup Funding" class="w-full h-64 object-cover">
-                <div class="absolute inset-0 z-20 flex flex-col justify-center px-8 md:px-12">
-                    <div class="flex items-center mb-2">
-                        <div class="h-8 w-1 bg-white mr-3"></div>
-                        <p class="text-white font-medium">FOUNDER CONNECT</p>
+    <header class="bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <!-- Logo and Title -->
+            <div class="flex justify-center">
+                <div class="text-center">
+                    <div class="flex items-center justify-center mb-6">
+                        <svg class="h-14 w-14 text-indigo-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h1 class="ml-4 text-5xl font-bold text-white">Elevate Your Startup</h1>
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#E94560] to-purple-600">Discover Startups</h1>
-                    <p class="text-lg text-gray-300 mb-4 max-w-2xl">Find promising startups to fund or collaborate with on our curated platform. Join 5,000+ investors who have already funded over $18M in innovative ideas.</p>
-                    <div class="flex flex-wrap gap-3 mt-2">
-                        <div class="flex items-center text-white bg-gradient-to-br from-gray-900 to-black border border-gray-500 bg-opacity-50 px-4 py-1 rounded-full">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
-                            </svg>
-                            <span class="text-sm">245 Active Pitches</span>
-                        </div>
-                        <div class="flex items-center text-white bg-gradient-to-br from-gray-900 to-black border border-gray-500 bg-opacity-50 px-4 py-1 rounded-full">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">$18.2M Funded</span>
-                        </div>
-                        <div class="flex items-center text-white bg-gradient-to-br from-gray-900 to-black border border-gray-500 bg-opacity-50 px-4 py-1 rounded-full">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">5,240+ Investors</span>
-                        </div>
-                    </div>
+                    <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
+                        Where visionary founders meet strategic investors
+                    </p>
                 </div>
             </div>
 
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-4 rounded-xl">
-                    <p class="text-gray-400 text-sm mb-1">Success Rate</p>
-                    <p class="text-2xl font-bold text-white">74%</p>
-                    <p class="text-xs text-gray-400">Startups achieving funding goals</p>
+            <!-- Feature Highlights -->
+            <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                <div class="bg-black bg-opacity-60 backdrop-filter backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-800 transform transition duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white mb-6 mx-auto shadow-lg">
+                        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20H7C5.89543 20 5 19.1046 5 18V6C5 4.89543 5.89543 4 7 4H17C18.1046 4 19 4.89543 19 6V18C19 19.1046 18.1046 20 17 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8 18C8 16.3431 9.79086 15 12 15C14.2091 15 16 16.3431 16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-3 text-indigo-300">Craft Your Story</h3>
+                    <p class="text-gray-400 text-center">Create a compelling narrative that showcases your vision and captivates potential investors</p>
                 </div>
-                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-4 rounded-xl">
-                    <p class="text-gray-400 text-sm mb-1">Avg. Funding</p>
-                    <p class="text-2xl font-bold text-white">$245K</p>
-                    <p class="text-xs text-gray-400">Per funded startup</p>
+
+                <div class="bg-black bg-opacity-60 backdrop-filter backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-800 transform transition duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white mb-6 mx-auto shadow-lg">
+                        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-3 text-indigo-300">Secure Funding</h3>
+                    <p class="text-gray-400 text-center">Connect with verified investors who are actively seeking the next breakthrough innovation</p>
                 </div>
-                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-4 rounded-xl">
-                    <p class="text-gray-400 text-sm mb-1">New This Week</p>
-                    <p class="text-2xl font-bold text-white">18</p>
-                    <p class="text-xs text-gray-400">Fresh startups added</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 p-4 rounded-xl">
-                    <p class="text-gray-400 text-sm mb-1">Collaborators</p>
-                    <p class="text-2xl font-bold text-white">2,840+</p>
-                    <p class="text-xs text-gray-400">Ready to join teams</p>
+
+                <div class="bg-black bg-opacity-60 backdrop-filter backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-800 transform transition duration-300 hover:scale-105">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white mb-6 mx-auto shadow-lg">
+                        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-center mb-3 text-indigo-300">Scale Rapidly</h3>
+                    <p class="text-gray-400 text-center">Access elite mentorship, strategic resources, and powerful networks to accelerate your growth</p>
                 </div>
             </div>
 
+            <!-- CTA Button -->
+            <div class="mt-16 text-center">
+                <a href="./pitchForm.php" class="inline-flex items-center px-10 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg transform transition duration-300 hover:scale-105">
+                    Submit Your Pitch
+                    <svg class="ml-3 -mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
 
+            <!-- Stats -->
+            <div class="mt-16 pt-8 border-t border-gray-800 ">
+                <dl class="grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-3 text-center">
+                    <div class="sm:border-r sm:border-gray-800">
+                        <dt class="text-sm font-medium text-gray-400">Startups Funded</dt>
+                        <dd class="mt-2 text-4xl font-bold text-white">3,200+</dd>
+                    </div>
+                    <div class="sm:border-r sm:border-gray-800">
+                        <dt class="text-sm font-medium text-gray-400">Active Investors</dt>
+                        <dd class="mt-2 text-4xl font-bold text-white">950+</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-400">Total Funding</dt>
+                        <dd class="mt-2 text-4xl font-bold text-white">$582M</dd>
+                    </div>
+                </dl>
+            </div>
         </div>
-    </section>
+    </header>
 
     <!-- Featured Startup -->
     <section class="px-6 md:px-12 mb-16">
@@ -186,36 +204,27 @@
         <!-- Add Pitch CTA -->
         <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl mb-12 shadow-lg border border-gray-700">
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="flex items-start gap-4">
-                    <div class="hidden md:block">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#E94560] to-purple-600 flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                <div>
+                    <h2 class="text-2xl font-bold mb-2 text-cyan-300">Have a startup idea?</h2>
+                    <p class="text-gray-300 mb-2">Share your vision and connect with investors and collaborators who believe in your idea.</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <div class="flex items-center text-xs text-gray-300">
+                            <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
+                            <span>Free to submit</span>
                         </div>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold mb-2 text-cyan-300">Have a startup idea?</h2>
-                        <p class="text-gray-300 mb-2">Share your vision and connect with investors and collaborators who believe in your idea.</p>
-                        <div class="flex flex-wrap gap-2 mt-3">
-                            <div class="flex items-center text-xs text-gray-300">
-                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Free to submit</span>
-                            </div>
-                            <div class="flex items-center text-xs text-gray-300">
-                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>2,800+ active investors</span>
-                            </div>
-                            <div class="flex items-center text-xs text-gray-300">
-                                <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Review within 48 hours</span>
-                            </div>
+                        <div class="flex items-center text-xs text-gray-300">
+                            <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>2,800+ active investors</span>
+                        </div>
+                        <div class="flex items-center text-xs text-gray-300">
+                            <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Review within 48 hours</span>
                         </div>
                     </div>
                 </div>
@@ -302,12 +311,6 @@
 
 
     </div>
-
-
-
-
-
-
 
 
     <!-- Pitch Listings -->
@@ -506,19 +509,12 @@
     <section class="px-6 md:px-12 py-16 mt-16">
         <div class="max-w-6xl mx-auto">
             <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-xl p-8">
-                <div class="flex flex-col md:flex-row items-center gap-6">
-                    <div class="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center">
-                        <svg class="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-1 text-center md:text-left">
-                        <h2 class="text-2xl font-bold mb-2">New Projects Coming Soon</h2>
-                        <p class="text-gray-300 mb-4">Get notified when new startups are available for funding. We're adding new pitches every week.</p>
-                        <div class="flex flex-col sm:flex-row gap-3">
-                            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            <button class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-bold hover:opacity-90 transition">Get Notified</button>
-                        </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl font-bold mb-2">New Projects Coming Soon</h2>
+                    <p class="text-gray-300 mb-4">Get notified when new startups are available for funding. We're adding new pitches every week.</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <button class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#E94560] to-purple-600 text-white font-bold hover:opacity-90 transition">Get Notified</button>
                     </div>
                 </div>
             </div>

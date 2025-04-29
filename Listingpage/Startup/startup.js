@@ -1,4 +1,3 @@
-
 // Toggle functionality for filter categories
 document.querySelectorAll(".filter-category button").forEach((button) => {
   button.addEventListener("click", () => {
