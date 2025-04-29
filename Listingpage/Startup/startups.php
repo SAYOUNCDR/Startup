@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql);
     <nav class="px-6 py-4 m-3 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
-            <a href="./main.php" class="flex items-center">
+            <a href="../../Home/main.php" class="flex items-center">
                 <!-- Logo -->
                 <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold ml-2">ElevateX</span>
             </a>
