@@ -40,7 +40,7 @@ session_start();
                     <div class="ml-3 relative">
                         <div>
                             <button class="flex items-center space-x-2 focus:outline-none">
-                                <img class="h-8 w-8 rounded-full border border-gray-700" src="/api/placeholder/32/32"
+                                <img class="h-8 w-8 rounded-full border border-gray-700" src="../Images/user-01.jpg"
                                     alt="User avatar">
                                 <span class="text-sm font-medium"><?php echo $_SESSION['founder_name'] ?></span>
                             </button>
@@ -57,7 +57,7 @@ session_start();
         <div class="mb-8 relative">
             <!-- Cover Image -->
             <div class="h-48 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-gray-700 shadow-lg">
-                <img class="w-full h-full object-cover opacity-40" src="/api/placeholder/1200/300" alt="Cover">
+                <img class="w-full h-full object-cover opacity-40" src="../Images/events-03.jpg" alt="Cover">
             </div>
 
             <div class="absolute bottom-0 left-0 transform translate-y-1/2 ml-6 sm:ml-10 flex items-end mb-5">
@@ -233,7 +233,7 @@ session_start();
                         <div class="mb-8 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800 overflow-hidden shadow-lg">
                             <div class="px-6 py-4  flex flex-col sm:flex-row sm:items-center">
                                 <img class="h-16 w-16 rounded-lg border border-gray-700 mb-4 sm:mb-0 sm:mr-6"
-                                    src="/api/placeholder/64/64" alt="Company logo">
+                                    src="../Images/events-02.jpg" alt="Company logo">
                                 <div class="flex-1">
                                     <div class="flex flex-wrap justify-between mb-2">
                                         <h4 class="text-lg font-bold">
@@ -272,15 +272,15 @@ session_start();
                             <div class="border-t border-gray-800 px-6 py-4">
                                 <h5 class="text-sm font-medium mb-3">Team</h5>
                                 <div class="flex -space-x-2 mb-2">
-                                    <img class="h-8 w-8 rounded-full border border-black" src="/api/placeholder/32/32"
+                                    <img class="h-8 w-8 rounded-full border border-black" src="../Images/user-01.jpg"
                                         alt="Team member">
-                                    <img class="h-8 w-8 rounded-full border border-black" src="/api/placeholder/32/32"
+                                    <img class="h-8 w-8 rounded-full border border-black" src="../Images/user-01.jpg"
                                         alt="Team member">
-                                    <img class="h-8 w-8 rounded-full border border-black" src="/api/placeholder/32/32"
+                                    <img class="h-8 w-8 rounded-full border border-black" src="../Images/user-01.jpg"
                                         alt="Team member">
-                                    <img class="h-8 w-8 rounded-full border border-black" src="/api/placeholder/32/32"
+                                    <img class="h-8 w-8 rounded-full border border-black" src="../Images/user-01.jpg"
                                         alt="Team member">
-                                    <img class="h-8 w-8 rounded-full border border-black" src="/api/placeholder/32/32"
+                                    <img class="h-8 w-8 rounded-full border border-black" src="../Images/user-01.jpg"
                                         alt="Team member">
                                     <div
                                         class="h-8 w-8 rounded-full border border-black bg-gray-800 flex items-center justify-center text-xs text-gray-300">
@@ -380,7 +380,7 @@ session_start();
                             class="bg-black rounded-xl border border-gray-800 overflow-hidden shadow-lg opacity-70 hover:opacity-100 transition duration-300">
                             <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center">
                                 <img class="h-16 w-16 rounded-lg border border-gray-700 mb-4 sm:mb-0 sm:mr-6"
-                                    src="/api/placeholder/64/64" alt="Company logo">
+                                    src="../Images/events-02.jpg" alt="Company logo">
                                 <div class="flex-1">
                                     <div class="flex flex-wrap justify-between mb-2">
                                         <h4 class="text-lg font-bold">PaymentFlow</h4>
